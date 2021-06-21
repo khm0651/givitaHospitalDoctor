@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="324px"
+            android:layout_height="52px"
+            android:text="TODAY"
+            android:textSize="35px"
+            android:layout_marginLeft="34px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notiList"
+            android:layout_width="445px"
+            android:layout_height="1423px"
+            android:layout_marginTop="14px"
+            android:layout_marginLeft="55px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/today" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

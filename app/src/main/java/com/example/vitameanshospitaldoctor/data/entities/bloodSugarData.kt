@@ -1,4 +1,4 @@
-package com.example.vitameanshospitaldoctor.data
+package com.example.vitameanshospitaldoctor.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

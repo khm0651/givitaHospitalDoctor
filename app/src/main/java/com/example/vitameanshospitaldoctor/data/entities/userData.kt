@@ -1,4 +1,4 @@
-package com.example.vitameanshospitaldoctor.data
+package com.example.vitameanshospitaldoctor.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -15,7 +15,7 @@ data class userData(
     @ColumnInfo(name = "sex")var sex: String,
     @ColumnInfo(name = "age")var age: Int,
     @ColumnInfo(name = "diseaseType")var diseaseType: String,
-    @ColumnInfo(name = "lastVisitDate")var lastVisitDate: String,
-    @ColumnInfo(name = "measureRequestDate")var measureRequestDate: String,
+    @ColumnInfo(name = "lastVisitDate")var lastVisitDate: Calendar,
+    @ColumnInfo(name = "measureRequestDate")var measureRequestDate: Calendar,
     @ColumnInfo(name = "receiveOrNot")var receiveOrNot: String
     )

@@ -1,5 +1,6 @@
 package com.example.vitameanshospitaldoctor.ui
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -9,9 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.ManageItemLayoutBinding
+import com.example.vitameanshospitaldoctor.showSnackbar
+import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 
 class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.ViewHolder>(){
+
+    private lateinit var mContext: Context
 
     private val diffCallback = object : DiffUtil.ItemCallback<Patient>(){
         override fun areItemsTheSame(oldItem: Patient, newItem: Patient): Boolean {
@@ -46,6 +51,22 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
                 requestDateTv.text = format.format(requestDate.time)
                 requestCheckTv.text = requestCheck
 
+                if(requestCheck == "N"){
+                    individualRegistrationBtn.setBackgroundColor(mContext.getColor(R.color.enable))
+                    individualRegistrationBtn.isEnabled = false
+                }
+
+                individualRegistrationBtn.setOnClickListener {
+                    it.showSnackbar("${name}님의 정보를 EMR에 전송하였습니다",Snackbar.LENGTH_SHORT)
+                }
+
+                requestBtn.setOnClickListener {
+                    it.showSnackbar("${name}님께 측정요청을 보냈습니다",Snackbar.LENGTH_SHORT)
+                }
+
+                recommendBtn.setOnClickListener {
+                    it.showSnackbar("${name}님께 식이/운동 추천을 보냈습니다",Snackbar.LENGTH_SHORT)
+                }
             }
         }
     }
@@ -54,6 +75,7 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
         parent: ViewGroup,
         viewType: Int
     ): ManageBloodPSTableAdapter.ViewHolder {
+        mContext = parent.context
         return ViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
@@ -66,6 +88,7 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
 
     override fun onBindViewHolder(holder: ManageBloodPSTableAdapter.ViewHolder, position: Int) {
         val item = differ.currentList[position]
+        if(position % 2 != 0) holder.itemView.setBackgroundColor(mContext.resources.getColor(R.color.odd,null))
         holder.bind(item)
     }
 

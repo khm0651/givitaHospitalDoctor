@@ -10,14 +10,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ManageBloodPSTable">
+        tools:context=".ui.ManageBloodPSTable"
+        >
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="70px"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
             android:orientation="horizontal"
+            android:background="@drawable/top_bottom_solid"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="54px"
+                app:layout_constraintGuide_percent="0.03"
+
                 />
 
             <androidx.constraintlayout.widget.Guideline
@@ -36,119 +39,112 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="143px"
-                />
+                app:layout_constraintGuide_percent="0.09" />
+
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="265px"
-                />
+                app:layout_constraintGuide_percent="0.17" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="387px"
-                />
+                app:layout_constraintGuide_percent="0.255" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="481px"
-                />
+                app:layout_constraintGuide_percent="0.31" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="562px"
-                />
+                app:layout_constraintGuide_percent="0.34" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="669px"
-                />
+                app:layout_constraintGuide_percent="0.38" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="790px"
-                />
+                app:layout_constraintGuide_percent="0.425" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="921px"
-                />
+                app:layout_constraintGuide_percent="0.49" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1052px"
-                />
+                app:layout_constraintGuide_percent="0.55" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1165px"
-                />
+                app:layout_constraintGuide_percent="0.63" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1278px"
-                />
+                app:layout_constraintGuide_percent="0.71" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1387px"
-                />
+                app:layout_constraintGuide_percent="0.765" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1539px"
-                />
+                app:layout_constraintGuide_percent="0.85" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="1688px"
-                />
+                app:layout_constraintGuide_percent="0.93" />
+
 
             <TextView
                 android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="Chk"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="@id/guideline1"
@@ -157,10 +153,15 @@
 
             <TextView
                 android:id="@+id/no_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="No"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline1"
                 app:layout_constraintRight_toRightOf="@id/guideline2"
@@ -169,10 +170,15 @@
 
             <TextView
                 android:id="@+id/manage_id_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="관리 ID"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline2"
@@ -181,10 +187,15 @@
 
             <TextView
                 android:id="@+id/register_date_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="환자 등록일"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline3"
                 app:layout_constraintRight_toRightOf="@id/guideline4"
@@ -193,10 +204,15 @@
 
             <TextView
                 android:id="@+id/name_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="이름"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline4"
                 app:layout_constraintRight_toRightOf="@id/guideline5"
@@ -205,10 +221,15 @@
 
             <TextView
                 android:id="@+id/gender_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="성별"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline5"
                 app:layout_constraintRight_toRightOf="@id/guideline6"
@@ -217,10 +238,15 @@
 
             <TextView
                 android:id="@+id/age_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="나이(만)"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline6"
                 app:layout_constraintRight_toRightOf="@id/guideline7"
@@ -229,10 +255,15 @@
 
             <TextView
                 android:id="@+id/disease_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
-                android:text="질환(유형)"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="질환"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline7"
                 app:layout_constraintRight_toRightOf="@id/guideline8"
@@ -243,10 +274,15 @@
 
             <TextView
                 android:id="@+id/blood_pressure_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
-                android:text="혈압(날짜)"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="혈압"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline8"
                 app:layout_constraintRight_toRightOf="@id/guideline9"
@@ -254,10 +290,15 @@
 
             <TextView
                 android:id="@+id/blood_sugar_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
-                android:text="혈당(날짜)"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="혈당"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline9"
                 app:layout_constraintRight_toRightOf="@id/guideline10"
@@ -265,10 +306,15 @@
 
             <TextView
                 android:id="@+id/latest_visit_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="최근\n내원일"
+                android:background="@drawable/right_solid"
                 android:textAlignment="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline10"
@@ -277,11 +323,15 @@
 
             <TextView
                 android:id="@+id/request_date_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="측정\n요청일"
-                android:textAlignment="center"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline11"
                 app:layout_constraintRight_toRightOf="@id/guideline12"
@@ -289,11 +339,15 @@
 
             <TextView
                 android:id="@+id/request_check_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20px"
-                android:text="측정값\n수신여부"
-                android:textAlignment="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="수신여부"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline12"
                 app:layout_constraintRight_toRightOf="@id/guideline13"
@@ -301,11 +355,15 @@
 
             <TextView
                 android:id="@+id/individual_registration_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10px"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="개별 등록"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline13"
                 app:layout_constraintRight_toRightOf="@id/guideline14"
@@ -313,11 +371,15 @@
 
             <TextView
                 android:id="@+id/request_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10px"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="측정요청"
+                android:background="@drawable/right_solid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline14"
                 app:layout_constraintRight_toRightOf="@id/guideline15"
@@ -325,11 +387,15 @@
 
             <TextView
                 android:id="@+id/recommend_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10px"
-                android:textSize="20px"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
                 android:text="식이/운동 추천"
+
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="@id/guideline15"
                 app:layout_constraintRight_toRightOf="parent"

@@ -10,4 +10,7 @@
 
     <color name="notification_button">#747474</color>
     <color name="notification_text">#212121</color>
+
+    <color name="scrollbar">#747474</color>
+    <color name="scrollbar_track">#D5D5D5</color>
 </resources>

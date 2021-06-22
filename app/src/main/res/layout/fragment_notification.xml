@@ -12,22 +12,30 @@
 
         <TextView
             android:id="@+id/today"
-            android:layout_width="324px"
-            android:layout_height="52px"
+            android:layout_width="162dp"
+            android:layout_height="26dp"
             android:text="TODAY"
-            android:textSize="35px"
-            android:layout_marginLeft="34px"
+            android:textSize="18dp"
+            android:layout_marginLeft="17dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notiList"
-            android:layout_width="445px"
-            android:layout_height="1423px"
-            android:layout_marginTop="14px"
-            android:layout_marginLeft="55px"
+            android:layout_width="250dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="28dp"
+            android:paddingLeft="20dp"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:scrollbarSize="4dp"
+            android:verticalScrollbarPosition="left"
+            android:scrollbarStyle="outsideOverlay"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/today" />
+            app:layout_constraintTop_toBottomOf="@+id/today"
+            style="@style/scroll_custom"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

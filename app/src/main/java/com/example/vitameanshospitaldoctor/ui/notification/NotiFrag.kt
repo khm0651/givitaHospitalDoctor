@@ -15,6 +15,7 @@ class NotiFrag: Fragment() {
 
     private lateinit var binding: FragmentNotificationBinding
     private lateinit var notiFragAdapter: NotiFragAdapter
+    val list = mutableListOf<Notification>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +33,7 @@ class NotiFrag: Fragment() {
     }
 
     private fun initAdapter() {
-        notiFragAdapter = NotiFragAdapter()
+        notiFragAdapter = NotiFragAdapter(list)
         binding.apply {
             notiList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
             notiList.setHasFixedSize(true) // 항상 동일한 크기로 정해두어
@@ -41,11 +42,14 @@ class NotiFrag: Fragment() {
     }
 
     private fun setData() {
-        val list = mutableListOf<Notification>()
         list.add(Notification("조윤진님 외 2명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
         list.add(Notification("김태양님 외 3명이\n아직 측정하지 않았습니다.\n알람을 보낼까요?","측정 요청"))
         list.add(Notification("곽하민님 외 4명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","측정 요청"))
         list.add(Notification("염승현님 외 5명이\n아직 측정하지 않았습니다.\n알람을 보낼까요?","EMR 일괄등록"))
+        list.add(Notification("김주영님 외 6명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
+        list.add(Notification("김주영님 외 6명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
+        list.add(Notification("김주영님 외 6명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
+        list.add(Notification("김주영님 외 6명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
         list.add(Notification("김주영님 외 6명이\n측정값을 보냈습니다.\nEMR에 등록할까요?","EMR 일괄등록"))
         notiFragAdapter.differ.submitList(list)
     }

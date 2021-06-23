@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defalut_font_size">16dp</dimen>
+    <dimen name="sub_font_size">12dp</dimen>
+
+</resources>

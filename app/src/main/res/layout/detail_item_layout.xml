@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:background="@drawable/all_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/g1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="SAT"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="21.06.19"
+                android:textColor="#212121"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/all_solid"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/g1"
+            app:layout_constraintRight_toRightOf="@id/g3"
+            app:layout_constraintBottom_toBottomOf="@id/g2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="혈압"
+                android:textSize="@dimen/defalut_font_size"
+                android:textColor="#212121" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(mmHg)"
+                android:textSize="@dimen/sub_font_size"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:weightSum="8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/g2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127\n/72"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/all_solid"
+            app:layout_constraintTop_toTopOf="@id/g2"
+            app:layout_constraintLeft_toLeftOf="@id/g1"
+            app:layout_constraintRight_toRightOf="@id/g3"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="혈당"
+                android:textSize="@dimen/defalut_font_size"
+                android:textColor="#212121" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(mg/dl)"
+                android:textSize="@dimen/sub_font_size"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:weightSum="8"
+            app:layout_constraintTop_toTopOf="@id/g2"
+            app:layout_constraintLeft_toLeftOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="127"
+                android:lineHeight="23dp"
+                android:textColor="#212121"
+                android:textSize="@dimen/defalut_font_size"
+                android:layout_weight="1"
+                android:background="@drawable/all_solid" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

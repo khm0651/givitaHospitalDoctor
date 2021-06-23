@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.databinding.FragmentDetailInfoBinding
 
@@ -12,7 +13,7 @@ import com.example.vitameanshospitaldoctor.databinding.FragmentDetailInfoBinding
 class DetailInfoFrag : Fragment() {
 
     lateinit var binding: FragmentDetailInfoBinding
-
+    lateinit var adapter: DetailInfoAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,7 +24,16 @@ class DetailInfoFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setRecyclerView()
+    }
 
+    private fun setRecyclerView() {
+        adapter = DetailInfoAdapter()
+        binding.apply {
+            detailRv.layoutManager = LinearLayoutManager(requireContext())
+            detailRv.adapter = adapter
+            detailRv.setHasFixedSize(true)
+        }
     }
 
 

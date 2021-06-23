@@ -37,8 +37,6 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
                 val format = SimpleDateFormat("yy.MM.dd")
                 val format2 = SimpleDateFormat("yyMMdd")
                 noTv.text = no.toString()
-                manageIdTv.text = uid
-                registerDateTv.text = format.format(registration.time)
                 nameTv.text = name
                 genderTv.text =gender
                 ageTv.text = age.toString()

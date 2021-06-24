@@ -16,7 +16,7 @@ interface userDataDao {
     suspend fun insertAll(userDataList: List<userData>)
 
     @Query("SELECT * FROM userData ORDER BY id DESC")
-    fun getAllUserData(): List<userData>
+    fun allUserData(): List<userData>
 
     @Query("SELECT * FROM userData WHERE userName like :userName")
     fun searchName(userName: String): List<userData>

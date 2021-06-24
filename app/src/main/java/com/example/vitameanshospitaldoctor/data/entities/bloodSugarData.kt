@@ -7,11 +7,12 @@ import java.util.*
 
 @Entity
 data class bloodSugarData(
-    @PrimaryKey(autoGenerate = true)val id: Int,
-    @ColumnInfo(name = "adminId")val adminId: String,
-    @ColumnInfo(name = "measureDate")val measureDate: Calendar = Calendar.getInstance(),
-    @ColumnInfo(name = "measurePoint")val measurePoint: String,
-    @ColumnInfo(name = "state") val state: String,
-    @ColumnInfo(name = "bloodSugar") val bloodSugar: Int,
-    @ColumnInfo(name = "userName") var userName: String
-)
+    val adminId: String,
+    val measureDate: Calendar = Calendar.getInstance(),
+    val measurePoint: String,
+    val state: String,
+    val bloodSugar: Int
+) {
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0
+}

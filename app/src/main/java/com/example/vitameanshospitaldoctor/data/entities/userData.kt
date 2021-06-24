@@ -8,14 +8,22 @@ import java.util.*
 
 @Entity
 data class userData(
-    @PrimaryKey(autoGenerate = true)val id: Int,
-    @ColumnInfo(name = "adminId")val adminId: String,
-    @ColumnInfo(name = "createdDate")var createdDate: Calendar = Calendar.getInstance(),
-    @ColumnInfo(name = "userName") var userName: String,
-    @ColumnInfo(name = "sex")var sex: String,
-    @ColumnInfo(name = "age")var age: Int,
-    @ColumnInfo(name = "diseaseType")var diseaseType: String,
-    @ColumnInfo(name = "lastVisitDate")var lastVisitDate: Calendar,
-    @ColumnInfo(name = "measureRequestDate")var measureRequestDate: Calendar,
-    @ColumnInfo(name = "receiveOrNot")var receiveOrNot: String
-    )
+    val adminId: String,
+    var createdDate: Calendar = Calendar.getInstance(),
+    var userName: String,
+    var sex: String,
+    var age: Int,
+    var shrinkage: Int?,
+    var relaxation: Int?,
+    var bpRegistrationDate: Calendar?,
+    var bloodSugar: Int?,
+    var bsRegistrationDate: Calendar?,
+    var diseaseType: String?,
+    var bloodPressureState: String?,
+    var lastVisitDate: Calendar?,
+    var measureRequestDate: Calendar?,
+    var receiveOrNot: String
+) {
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0
+}

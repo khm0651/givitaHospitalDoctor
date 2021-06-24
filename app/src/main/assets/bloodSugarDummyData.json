@@ -1,0 +1,563 @@
+[
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623968353000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623975553000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623977413000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 174
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623988213000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623991813000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 182
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1624006213000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1624009813000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 176
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 11624024213000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623883813000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623887413000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623891013000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 178
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623901813000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623905413000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 180
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623919813000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 151
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623923413000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 178
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623937813000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623797413000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623801013000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623804613000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 189
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623811813000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 152
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623815413000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 187
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623833413000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623837013000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 179
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623851413000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 155
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623711013000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623714613000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623718213000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 179
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623729013000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 151
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623732613000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 188
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623747013000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 152
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623750613000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 190
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measureDate": 1623765013000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622241620000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 128
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622245220000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 131
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622248820000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 165
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622256020000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 128
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622262630000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622277030000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 133
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622280630000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 159
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622295030000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1621981830000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 129
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1621985430000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 113
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1621989030000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1621999830000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622003430000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622017830000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 125
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622021430000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 164
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate":1622035830000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 125
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622068230000,
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622071830000,
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 116
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622075430000,
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 165
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622086230000,
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622089830000,
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 159
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622104230000,
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 127
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate": 1622107830000,
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measureDate":1622122230000,
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 116
+  }
+,
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624228230000,
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624231830000,
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624235430000,
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 239
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624246230000,
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624249830000,
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 237
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624267830000,
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 203
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624271430000,
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate":1624282230000,
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624141830000,
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624145430000,
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 210
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate":1624149030000,
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624156230000,
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 202
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624159830000,
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 238
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624177830000,
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 204
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624181430000,
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate":1624195830000,
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624055430000,
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624059030000,
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate":1624062630000,
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 237
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 11624073430000,
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 200
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624077030000,
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624095030000,
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 200
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate": 1624098630000,
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 238
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measureDate":1624109430000,
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  }
+]

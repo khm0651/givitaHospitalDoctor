@@ -1,6 +1,5 @@
 package com.example.vitameanshospitaldoctor.ui.notification
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Notification
 import com.example.vitameanshospitaldoctor.databinding.FragmentNotificationListItemLayoutBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
-class NotiFragAdapter(private var noti: MutableList<Notification>) : RecyclerView.Adapter<NotiFragAdapter.ItemViewHolder>() {
-
-    private lateinit var removeItem: ImageView
+class NotiFragAdapter(val adapterOnClick : (Int) -> Unit) : RecyclerView.Adapter<NotiFragAdapter.ItemViewHolder>() {
 
     private val diffUtil = object : DiffUtil.ItemCallback<Notification>() {
         // 두 아이템이 동일한 아이템인지 체크한다.
@@ -34,37 +33,55 @@ class NotiFragAdapter(private var noti: MutableList<Notification>) : RecyclerVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         return ItemViewHolder(
-            DataBindingUtil.inflate(
-                LayoutInflater.from(parent.context),
-                R.layout.fragment_notification_list_item_layout,
-                parent,
-                false
-            )
-        )
+                    DataBindingUtil.inflate(LayoutInflater.from(parent.context),
+                        R.layout.fragment_notification_list_item_layout, parent, false))
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = differ.currentList[position]
-        holder.bind(item)
-        removeItem.setOnClickListener(View.OnClickListener { rmItem(position) })
+
+        if(position > 0){
+            if(differ.currentList.elementAt(position-1).notiCalendar!=differ.currentList.elementAt(position).notiCalendar){
+                holder.visible()
+            }
+        }
+        holder.bind(item,position)
+
     }
 
-    override fun getItemCount(): Int = noti.size
+    override fun getItemCount(): Int = differ.currentList.size
 
     inner class ItemViewHolder(private val binding: FragmentNotificationListItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Notification) = with(item) {
+        fun bind(item: Notification,pos: Int) = with(item) {
             binding.apply {
                 notiTV.text = notiText.toString()
                 notiBtn.text = notiButton.toString()
-                removeItem = notiBtnRemove
+                notiCal.text = notiCalendar.toString()
+                notiBtnRemove.setOnClickListener {
+                    adapterOnClick(pos)
+                }
+            }
+        }
+
+        fun visible() {
+            binding.notiCal.visibility = View.VISIBLE
+        }
+
+        fun setItem(item: Int) {
+            binding.notiBtnRemove.setOnClickListener{
+                adapterOnClick(item)
+//                println(position)
+//                rmItem(position)
             }
         }
     }
 
-    private fun rmItem(position: Int) {
-        noti.removeAt(position)
-        notifyDataSetChanged()
-    }
+//    private fun rmItem(position: Int) {
+//        val temp = differ.currentList.toMutableList()
+//        temp.removeAt(position)
+//        println(position)
+//        differ.submitList(temp)
+//    }
 }

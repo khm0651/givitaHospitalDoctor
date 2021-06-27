@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:background="@color/noti_background">
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="162dp"
+            android:layout_height="26dp"
+            android:text="TODAY"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notiList"
+            android:layout_width="230dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:scrollbarSize="4dp"
+            android:verticalScrollbarPosition="left"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/today"
+            style="@style/scroll_custom"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

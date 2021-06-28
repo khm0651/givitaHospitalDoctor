@@ -49,6 +49,7 @@
                 android:layout_height="30dp"
                 android:gravity="center"
                 android:layout_gravity="center"
+                android:checked="true"
                 android:button="@drawable/check_box_selector"
                 />
 
@@ -80,6 +81,7 @@
                 android:layout_height="30dp"
                 android:gravity="center"
                 android:layout_gravity="center"
+                android:checked="true"
                 android:button="@drawable/check_box_selector"
                 />
 

@@ -53,6 +53,9 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
                 if(requestCheck == "N"){
                     individualRegistrationBtn.setBackgroundColor(mContext.getColor(R.color.enable))
                     individualRegistrationBtn.isEnabled = false
+                }else{
+                    individualRegistrationBtn.background = mContext.getDrawable(R.drawable.all_radius_fill_grey_bg)
+                    individualRegistrationBtn.isEnabled = true
                 }
 
                 individualRegistrationBtn.setOnClickListener {
@@ -88,6 +91,7 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = differ.currentList[position]
         if(position % 2 != 0) holder.itemView.setBackgroundColor(mContext.resources.getColor(R.color.odd,null))
+        else holder.itemView.setBackgroundColor(mContext.resources.getColor(R.color.white,null))
         holder.bind(item)
     }
 

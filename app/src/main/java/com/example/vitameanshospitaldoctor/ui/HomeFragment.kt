@@ -1,13 +1,16 @@
 package com.example.vitameanshospitaldoctor.ui
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.databinding.FragmentHomeBinding
+import com.example.vitameanshospitaldoctor.utils.Util
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -29,13 +32,15 @@ class HomeFragment : Fragment() {
         viewpager.adapter = ViewPagerAdapter(this)
         TabLayoutMediator(tabLayout,viewpager) { tab, pos ->
             tab.text = getTabTitle(pos)
+            tab.view.gravity = Gravity.CENTER_VERTICAL
         }.attach()
+
         for(i in 0 until tabLayout.tabCount){
             val view = (tabLayout.getChildAt(0) as ViewGroup).getChildAt(i)
             val param = view.layoutParams as ViewGroup.MarginLayoutParams
-            param.rightMargin = 20
+            param.rightMargin = Util.dpToPx(10f).toInt()
             val param2 = view.layoutParams
-            param2.width = 500
+            param2.width = Util.dpToPx(286f).toInt()
             view.requestLayout()
         }
         return binding.root

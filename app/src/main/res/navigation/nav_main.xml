@@ -11,18 +11,6 @@
         android:label="fragment_manage_blood_p_s"
         tools:layout="@layout/fragment_manage_blood_p_s" />
     <fragment
-        android:id="@+id/manageBloodPSTable"
-        android:name="com.example.vitameanshospitaldoctor.ui.bp_bs.ManageBloodPSTable"
-        android:label="ManageBloodPSTable"
-        tools:layout="@layout/fragment_manage_blood_p_s_table"
-        />
-    <fragment
-        android:id="@+id/detailInfoFrag"
-        android:name="com.example.vitameanshospitaldoctor.ui.detail.DetailInfoFrag"
-        android:label="DetailInfoFrag"
-        tools:layout="@layout/fragment_detail_info"
-        />
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.vitameanshospitaldoctor.ui.HomeFragment"
         android:label="HomeFragment"

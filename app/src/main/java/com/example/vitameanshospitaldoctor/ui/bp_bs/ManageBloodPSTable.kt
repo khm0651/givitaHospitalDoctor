@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
 import java.util.*
@@ -49,13 +51,15 @@ class ManageBloodPSTable(
     }
 
     private fun setRecyclerView() {
-        adapter = ManageBloodPSTableAdapter()
+        adapter = ManageBloodPSTableAdapter{ findNavController().navigate(R.id.action_manageBloodPSTable_to_detailInfoFrag) }
         binding.apply {
             manageRv.layoutManager = LinearLayoutManager(requireContext())
             manageRv.setHasFixedSize(true)
             manageRv.adapter = adapter
         }
     }
+
+
 
 //    companion object {
 //

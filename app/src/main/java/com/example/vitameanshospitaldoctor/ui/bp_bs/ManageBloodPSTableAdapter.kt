@@ -14,7 +14,7 @@ import com.example.vitameanshospitaldoctor.showSnackbar
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 
-class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.ViewHolder>(){
+class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter<ManageBloodPSTableAdapter.ViewHolder>(){
 
     private lateinit var mContext: Context
 
@@ -34,6 +34,7 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
     inner class ViewHolder(private val binding: ManageItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: Patient) = with(item){
             binding.apply {
+                binding.root.setOnClickListener{ navigate() }
                 val format = SimpleDateFormat("yy.MM.dd")
                 val format2 = SimpleDateFormat("yyMMdd")
                 noTv.text = no.toString()

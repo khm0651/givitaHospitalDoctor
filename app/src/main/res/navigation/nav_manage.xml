@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_manage"
+    app:startDestination="@id/manageBloodPSTable">
+
+    <fragment
+        android:id="@+id/manageBloodPSTable"
+        android:name="com.example.vitameanshospitaldoctor.ui.bp_bs.ManageBloodPSTable"
+        android:label="ManageBloodPSTable"
+        tools:layout="@layout/fragment_manage_blood_p_s_table"
+        >
+        <action
+            android:id="@+id/action_manageBloodPSTable_to_detailInfoFrag"
+            app:destination="@id/detailInfoFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailInfoFrag"
+        android:name="com.example.vitameanshospitaldoctor.ui.detail.DetailInfoFrag"
+        android:label="DetailInfoFrag"
+        tools:layout="@layout/fragment_detail_info"
+        />
+</navigation>

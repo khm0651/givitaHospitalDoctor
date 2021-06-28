@@ -8,6 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="default_text_color">#212121</color>
     <color name="odd">#F4F4F4</color>
     <color name="enable">#DBDBDB</color>
+
+    <color name="tab_bg_selected">#626262</color>
+    <color name="tab_bg_unselected">#979797</color>
 </resources>

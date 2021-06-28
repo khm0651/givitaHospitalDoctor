@@ -1,4 +1,4 @@
-package com.example.vitameanshospitaldoctor.ui
+package com.example.vitameanshospitaldoctor.ui.bp_bs
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -72,7 +72,7 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ManageBloodPSTableAdapter.ViewHolder {
+    ): ViewHolder {
         mContext = parent.context
         return ViewHolder(
             DataBindingUtil.inflate(
@@ -84,7 +84,7 @@ class ManageBloodPSTableAdapter: RecyclerView.Adapter<ManageBloodPSTableAdapter.
         )
     }
 
-    override fun onBindViewHolder(holder: ManageBloodPSTableAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = differ.currentList[position]
         if(position % 2 != 0) holder.itemView.setBackgroundColor(mContext.resources.getColor(R.color.odd,null))
         holder.bind(item)

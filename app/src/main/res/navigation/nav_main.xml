@@ -3,17 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
-    app:startDestination="@id/frag_noti">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/manageBloodPSFrag"
-        android:name="com.example.vitameanshospitaldoctor.ui.ManageBloodPSFrag"
+        android:name="com.example.vitameanshospitaldoctor.ui.bp_bs.ManageBloodPSFrag"
         android:label="fragment_manage_blood_p_s"
         tools:layout="@layout/fragment_manage_blood_p_s" />
 
     <fragment
-        android:id="@+id/frag_noti"
-        android:name="com.example.vitameanshospitaldoctor.ui.notification.NotiFrag"
-        android:label="frag_noti"
-        tools:layout="@layout/fragment_notification"/>
+        android:id="@+id/homeFragment"
+        android:name="com.example.vitameanshospitaldoctor.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"
+        />
+
 </navigation>

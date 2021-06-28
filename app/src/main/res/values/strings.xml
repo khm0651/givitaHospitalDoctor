@@ -2,4 +2,8 @@
     <string name="app_name">vitameansHospitalDoctor</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vita_checkup">VITA CHECK UP</string>
+    <string name="bp_bs_patient_manage_title">당뇨환자 혈압/혈당 관리</string>
+    <string name="obesity_patient_manage_title">비만 환자 운동량/BMI 관리</string>
+    <string name="high_bp_patient_manage_title">고혈압 환자 혈압 관리</string>
 </resources>

@@ -1,9 +1,7 @@
 package com.example.vitameanshospitaldoctor.data.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import com.example.vitameanshospitaldoctor.data.Converters
 import com.example.vitameanshospitaldoctor.data.entities.bloodPressureData
 import com.example.vitameanshospitaldoctor.data.entities.userData
 

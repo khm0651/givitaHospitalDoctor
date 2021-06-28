@@ -3,16 +3,19 @@ package com.example.vitameanshospitaldoctor.data.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.example.vitameanshospitaldoctor.data.Converters
 import java.util.*
 
 @Entity
+@TypeConverters(Converters::class)
 data class bloodSugarData(
     val adminId: String,
-    val measureDate: Calendar = Calendar.getInstance(),
+    var measureDate: Calendar,
     val measurePoint: String,
     val state: String,
     val bloodSugar: Int
 ) {
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0
+    var id: Int = 0
 }

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
@@ -24,7 +26,7 @@ class ManageBloodPSTable(
 
     lateinit var binding: FragmentManageBloodPSTableBinding
     lateinit var adapter: ManageBloodPSTableAdapter
-    @Inject lateinit var userRepos: UserRepos
+    private val viewModel: ManageBloodPSTableVM by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,13 +38,23 @@ class ManageBloodPSTable(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerView()
-        setFakeData()
+
+        setObserver()
+
+        //     setFakeData()
     }
+
+    private fun setObserver(){
+        viewModel.userList.observe(viewLifecycleOwner,{
+            adapter.differ.submitList(it)
+        })
+    }
+
 
     private fun setFakeData() {
 
         val c = Calendar.getInstance()
-        val userList = userRepos.getUsers()
+
 
         val list = mutableListOf<Patient>()
        /* list.add(Patient(36784,"36wbdcxr",c,"김비당","남",64,"1형",130,70,c,98,c,c,c,"N"))
@@ -55,7 +67,7 @@ class ManageBloodPSTable(
         list.add(Patient(36777,"asdf321",c,"김남준","남",42,"2형",130,89,c,88,c,c,c,"Y"))
         list.add(Patient(36776,"1dasdzx2",c,"최다울","남",36,"1형",130,97,c,95,c,c,c,"Y"))
         list.add(Patient(36775,"dffs3adf",c,"진정환","남",29,"3형",130,99,c,85,c,c,c,"Y"))*/
-        adapter.differ.submitList(userList)
+
     }
 
     private fun setRecyclerView() {

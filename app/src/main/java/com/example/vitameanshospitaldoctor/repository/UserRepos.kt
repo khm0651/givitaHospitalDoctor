@@ -14,21 +14,21 @@ class UserRepos @Inject constructor(private val userDao: userDataDao) {
 
     fun searchName(userName: String) = userDao.searchName(userName)
 
-    fun searchFilter(
-        minAge: Int,
-        maxAge: Int,
-        sex: String,
-        diseaseType: String,
-        minDate: Calendar,
-        maxDate: Calendar,
-        receiveOrNot: String
-    ) = userDao.searchFilter(
-        minAge, maxAge,
-        sex,
-        diseaseType,
-        minDate,
-        maxDate,
-        receiveOrNot
-    )
+//    fun searchFilter(
+//        minAge: Int,
+//        maxAge: Int,
+//        sex: String,
+//        diseaseType: String,
+//        minDate: Calendar,
+//        maxDate: Calendar,
+//        receiveOrNot: String
+//    ) = userDao.searchFilter(
+//        minAge, maxAge,
+//        sex,
+//        diseaseType,
+//        minDate,
+//        maxDate,
+//        receiveOrNot
+//    )
 
 }

@@ -1,12 +1,11 @@
 package com.example.vitameanshospitaldoctor.data.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import com.example.vitameanshospitaldoctor.data.Converters
 import com.example.vitameanshospitaldoctor.data.entities.userData
+import kotlinx.coroutines.flow.Flow
 import java.util.*
-import java.util.concurrent.Flow
+
 
 
 @Dao
@@ -15,8 +14,8 @@ interface userDataDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(userDataList: List<userData>)
 
-    @Query("SELECT * FROM userData ORDER BY id DESC")
-    fun allUserData(): List<userData>
+    @Query("SELECT * FROM userData")
+    fun allUserData(): Flow<List<userData>>
 
     @Query("SELECT * FROM userData WHERE userName like :userName")
     fun searchName(userName: String): List<userData>

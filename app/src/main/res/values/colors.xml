@@ -14,4 +14,13 @@
 
     <color name="tab_bg_selected">#626262</color>
     <color name="tab_bg_unselected">#979797</color>
+
+    <color name="notification_button">#747474</color>
+    <color name="notification_text">#212121</color>
+
+    <color name="noti_background">#F3F3F3</color>
+
+    <color name="scrollbar">#747474</color>
+    <color name="scrollbar_track">#D5D5D5</color>
+
 </resources>

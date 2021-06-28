@@ -12,4 +12,5 @@
     <color name="enable">#DBDBDB</color>
 
     <color name="darkGray">#4A4A4A</color>
+    <color name="btnGray">#A0A0A0</color>
 </resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="1050dp"
+        android:layout_height="684dp"
+        android:background="@drawable/dialog_name_search_solid">
+
+        <TextView
+            android:layout_width="295dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:text="찾으시는 환자의 이름을 알려주세요"
+            android:textColor="#4B4B4B"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="980dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"
+            android:text="조윤진"
+            android:textColor="#4B4B4B"
+            android:textSize="115dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="176dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:text="검색결과 2 건"
+            android:textColor="#4B4B4B"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <LinearLayout
+            android:id="@+id/linear_head"
+            android:layout_width="980dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/linearlayout_name_search_solid"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_result">
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="15dp"
+                android:text="No"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="54dp"
+                android:layout_height="15dp"
+                android:text="환자 등록일"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="24dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="15dp"
+                android:text="이름"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="27dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="15dp"
+                android:text="성별"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="15dp"
+                android:text="나이(만)"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="15dp"
+                android:text="질환(유형)"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="15dp"
+                android:text="혈압(날짜)"
+                android:textColor="#212121"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="47dp"
+                android:layout_height="15dp"
+                android:text="혈당(날짜)"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:text="최근\n내원일"
+                android:gravity="center"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:text="측정\n요청일"
+                android:gravity="center"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="38dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:text="측정값\n수신여부"
+                android:gravity="center"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="27dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="49dp"
+                android:layout_height="15dp"
+                android:text="교육"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="27dp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="49dp"
+                android:layout_height="15dp"
+                android:text="개별등록"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="35dp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="15dp"
+                android:text="측정요청"
+                android:textColor="#212121"
+                android:textSize="10dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="43dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="980dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="38dp"
+    android:layout_marginTop="7dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linear_head"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

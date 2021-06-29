@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
+import com.example.vitameanshospitaldoctor.data.entities.userData
 import com.example.vitameanshospitaldoctor.databinding.ManageItemLayoutBinding
 import com.example.vitameanshospitaldoctor.showSnackbar
 import com.google.android.material.snackbar.Snackbar
@@ -18,12 +19,12 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
 
     private lateinit var mContext: Context
 
-    private val diffCallback = object : DiffUtil.ItemCallback<Patient>(){
-        override fun areItemsTheSame(oldItem: Patient, newItem: Patient): Boolean {
-            return oldItem.uid == newItem.uid
+    private val diffCallback = object : DiffUtil.ItemCallback<userData>(){
+        override fun areItemsTheSame(oldItem: userData, newItem: userData): Boolean {
+            return oldItem.adminId == newItem.adminId
         }
 
-        override fun areContentsTheSame(oldItem: Patient, newItem: Patient): Boolean {
+        override fun areContentsTheSame(oldItem: userData, newItem: userData): Boolean {
             return oldItem == newItem
         }
 
@@ -32,25 +33,26 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
     val differ = AsyncListDiffer(this,diffCallback)
 
     inner class ViewHolder(private val binding: ManageItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: Patient) = with(item){
+        fun bind(item: userData) = with(item){
             binding.apply {
                 binding.root.setOnClickListener{ navigate() }
                 val format = SimpleDateFormat("yy.MM.dd")
                 val format2 = SimpleDateFormat("yyMMdd")
-                noTv.text = no.toString()
-                nameTv.text = name
-                genderTv.text =gender
-                ageTv.text = age.toString()
-                diseaseTv.text = disease
-                bloodPressureTv.text = "${shrinkage}/${relaxation}"
-                bloodPressureDateTv.text = format2.format(bpRegistrationDate.time)
-                bloodSugarTv.text = bloodSugar.toString()
-                bloodSugarDateTv.text = format2.format(bsRegistrationDate.time)
-                latestVisitTv.text = format.format(latestVisit.time)
-                requestDateTv.text = format.format(requestDate.time)
-                requestCheckTv.text = requestCheck
 
-                if(requestCheck == "N"){
+                noTv.text = id.toString()
+                nameTv.text = userName
+                genderTv.text =sex
+                ageTv.text = age.toString()
+                diseaseTv.text = diseaseType
+                bloodPressureTv.text = "${shrinkage}/${relaxation}"
+                bloodPressureDateTv.text = format2.format(bpRegistrationDate?.time)
+                bloodSugarTv.text = bloodSugar.toString()
+                bloodSugarDateTv.text = format2.format(bsRegistrationDate?.time)
+                latestVisitTv.text = format.format(lastVisitDate?.time)
+                requestDateTv.text = format.format(measureRequestDate?.time)
+                requestCheckTv.text = receiveOrNot
+
+                if(receiveOrNot == "N"){
                     individualRegistrationBtn.setBackgroundColor(mContext.getColor(R.color.enable))
                     individualRegistrationBtn.isEnabled = false
                 }else{
@@ -59,15 +61,15 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
                 }
 
                 individualRegistrationBtn.setOnClickListener {
-                    it.showSnackbar("${name}님의 정보를 EMR에 전송하였습니다",Snackbar.LENGTH_SHORT)
+                    it.showSnackbar("${userName}님의 정보를 EMR에 전송하였습니다",Snackbar.LENGTH_SHORT)
                 }
 
                 requestBtn.setOnClickListener {
-                    it.showSnackbar("${name}님께 측정요청을 보냈습니다",Snackbar.LENGTH_SHORT)
+                    it.showSnackbar("${userName}님께 측정요청을 보냈습니다",Snackbar.LENGTH_SHORT)
                 }
 
                 recommendBtn.setOnClickListener {
-                    it.showSnackbar("${name}님께 식이/운동 추천을 보냈습니다",Snackbar.LENGTH_SHORT)
+                    it.showSnackbar("${userName}님께 식이/운동 추천을 보냈습니다",Snackbar.LENGTH_SHORT)
                 }
             }
         }

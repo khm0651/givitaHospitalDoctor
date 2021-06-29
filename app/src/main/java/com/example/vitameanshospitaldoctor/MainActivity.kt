@@ -2,12 +2,14 @@ package com.example.vitameanshospitaldoctor
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.drawerlayout.widget.DrawerLayout
 import com.example.vitameanshospitaldoctor.databinding.ActivityMainBinding
 import com.example.vitameanshospitaldoctor.utils.Util
 
+import dagger.hilt.android.AndroidEntryPoint
+
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding

@@ -5,21 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.vitameanshospitaldoctor.ui.ManageBloodPSTableVM
 import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
-
+@AndroidEntryPoint
 class ManageBloodPSTable(
 //    private val pViewModel: ViewModel
 ) : Fragment() {
 
     lateinit var binding: FragmentManageBloodPSTableBinding
     lateinit var adapter: ManageBloodPSTableAdapter
-
+    private val viewModel: ManageBloodPSTableVM by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,13 +34,26 @@ class ManageBloodPSTable(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerView()
-        setFakeData()
+
+        setObserver()
+
+        //     setFakeData()
     }
 
+    private fun setObserver(){
+        viewModel.userList.observe(viewLifecycleOwner,{
+            adapter.differ.submitList(it)
+        })
+    }
+
+
     private fun setFakeData() {
+
         val c = Calendar.getInstance()
+
+
         val list = mutableListOf<Patient>()
-        list.add(Patient(36784,"36wbdcxr",c,"김비당","남",64,"1형",130,70,c,98,c,c,c,"N"))
+       /* list.add(Patient(36784,"36wbdcxr",c,"김비당","남",64,"1형",130,70,c,98,c,c,c,"N"))
         list.add(Patient(36783,"tg2sdfsd",c,"박준규","남",62,"1형",130,102,c,80,c,c,c,"N"))
         list.add(Patient(36782,"asdf324d",c,"이익준","남",57,"2형",130,99,c,85,c,c,c,"N"))
         list.add(Patient(36781,"1213asd",c,"심하늘","남",39,"3형",130,104,c,78,c,c,c,"N"))
@@ -46,8 +62,8 @@ class ManageBloodPSTable(
         list.add(Patient(36778,"gsdfg212",c,"박재상","남",49,"1형",130,88,c,80,c,c,c,"Y"))
         list.add(Patient(36777,"asdf321",c,"김남준","남",42,"2형",130,89,c,88,c,c,c,"Y"))
         list.add(Patient(36776,"1dasdzx2",c,"최다울","남",36,"1형",130,97,c,95,c,c,c,"Y"))
-        list.add(Patient(36775,"dffs3adf",c,"진정환","남",29,"3형",130,99,c,85,c,c,c,"Y"))
-        adapter.differ.submitList(list)
+        list.add(Patient(36775,"dffs3adf",c,"진정환","남",29,"3형",130,99,c,85,c,c,c,"Y"))*/
+
     }
 
     private fun setRecyclerView() {

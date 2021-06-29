@@ -1,0 +1,563 @@
+[
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 73
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "shrinkage": 119,
+    "relaxation": 75
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "shrinkage": 120,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 69
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "shrinkage": 115,
+    "relaxation": 77
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 72
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 73
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "shrinkage": 119,
+    "relaxation": 75
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "shrinkage": 120,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 69
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "shrinkage": 115,
+    "relaxation": 77
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 72
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 73
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "shrinkage": 119,
+    "relaxation": 75
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "shrinkage": 120,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 69
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "shrinkage": 115,
+    "relaxation": 77
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 72
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 73
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "shrinkage": 119,
+    "relaxation": 75
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "shrinkage": 120,
+    "relaxation": 70
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 69
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "shrinkage": 115,
+    "relaxation": 77
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "shrinkage": 112,
+    "relaxation": 72
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "shrinkage": 116,
+    "relaxation": 70
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "고혈압2단계",
+    "shrinkage": 161,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "고혈압1단계",
+    "shrinkage": 152,
+    "relaxation": 98
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "고혈압2단계",
+    "shrinkage": 156,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "고혈압2단계",
+    "shrinkage": 166,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "고혈압2단계",
+    "shrinkage": 169,
+    "relaxation": 107
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "고혈압2단계",
+    "shrinkage": 164,
+    "relaxation": 98
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "고혈압2단계",
+    "shrinkage": 161,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "고혈압1단계",
+    "shrinkage": 152,
+    "relaxation": 98
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "고혈압2단계",
+    "shrinkage": 156,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "고혈압2단계",
+    "shrinkage": 166,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "고혈압2단계",
+    "shrinkage": 169,
+    "relaxation": 107
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "고혈압2단계",
+    "shrinkage": 164,
+    "relaxation": 98
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "고혈압2단계",
+    "shrinkage": 161,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "고혈압1단계",
+    "shrinkage": 152,
+    "relaxation": 98
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "고혈압2단계",
+    "shrinkage": 156,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "고혈압2단계",
+    "shrinkage": 166,
+    "relaxation": 102
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "고혈압2단계",
+    "shrinkage": 167,
+    "relaxation": 101
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "고혈압2단계",
+    "shrinkage": 169,
+    "relaxation": 107
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "고혈압2단계",
+    "shrinkage": 164,
+    "relaxation": 98
+  }
+,
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "고혈압위험",
+    "shrinkage": 126,
+    "relaxation": 80
+  }
+]

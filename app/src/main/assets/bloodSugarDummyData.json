@@ -1,0 +1,483 @@
+[
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 174
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 182
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 176
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 178
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 180
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 151
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 178
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 150
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 189
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 152
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 187
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 179
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 155
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 156
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 143
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 179
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 151
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 188
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 152
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 190
+  },
+  {
+    "adminId": "sqft3fd3",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 144
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 128
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 131
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 165
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 128
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 133
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 159
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 129
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 113
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 125
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 164
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 125
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "기상직후",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식전",
+    "state": "정상",
+    "bloodSugar": 116
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "아침식후",
+    "state": "정상",
+    "bloodSugar": 165
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식전",
+    "state": "정상",
+    "bloodSugar": 121
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "점심식후",
+    "state": "정상",
+    "bloodSugar": 159
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식전",
+    "state": "정상",
+    "bloodSugar": 127
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "저녁식후",
+    "state": "정상",
+    "bloodSugar": 161
+  },
+  {
+    "adminId": "eggeom3mez",
+    "measurePoint": "취침전",
+    "state": "정상",
+    "bloodSugar": 116
+  }
+,
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 239
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 237
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 203
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 210
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 202
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 238
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 204
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "기상직후",
+    "state": "나쁨",
+    "bloodSugar": 207
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "아침식후",
+    "state": "나쁨",
+    "bloodSugar": 237
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식전",
+    "state": "나쁨",
+    "bloodSugar": 200
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "점심식후",
+    "state": "나쁨",
+    "bloodSugar": 240
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식전",
+    "state": "나쁨",
+    "bloodSugar": 200
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "저녁식후",
+    "state": "나쁨",
+    "bloodSugar": 238
+  },
+  {
+    "adminId": "qwrcot2ko",
+    "measurePoint": "취침전",
+    "state": "나쁨",
+    "bloodSugar": 201
+  }
+]

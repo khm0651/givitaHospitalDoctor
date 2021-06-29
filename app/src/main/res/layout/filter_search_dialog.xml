@@ -3,143 +3,1574 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools">
 
-    <data>
+    <data></data>
 
-    </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_margin="75dp"
-        android:layout_width="match_parent"
-        android:layout_height="683.5dp"
-        android:background="@drawable/dialog_name_search_solid">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="26dp"
-        android:paddingRight="26dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="어떤 조건의 환자를 찾을까요?"
-            android:textColor="@color/textBlack"
-            android:textSize="20dp"
-            android:fontFamily="@font/spoqa_han_sans_neo_medium"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/h1"
-            app:layout_constraintVertical_bias="1"
-            />
+        android:layout_margin="75dp"
+        android:background="@drawable/dialog_name_search_solid">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_age"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/h1"
-            app:layout_constraintBottom_toTopOf="@id/h2"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="어떤 조건의 환자를 찾을까요?"
+                android:textColor="@color/textBlack"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/h1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_age"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toTopOf="@id/h2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="나이"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.294" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.38" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.61" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.68" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.75" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.82" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.89" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint1_h14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_min_age"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_wave1"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:src="@drawable/ic_resource__"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/constraint1_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_max_age"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="150"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/constraint1_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:gravity="center_vertical"
+                    android:text="세 사이의 환자만"
+                    android:textColor="@color/textBlack"
+                    android:textSize="17dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h6"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h7"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="10대만"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h8"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h9"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h9"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="20대만"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h9"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h10"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h10"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="30대만"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h10"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h11"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h11"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="40대만"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h11"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h12"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h12"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="50대만"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h12"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h13"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint1_h13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="60대 이상"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint1_h13"
+                    app:layout_constraintRight_toRightOf="@id/constraint1_h14"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_sex"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toTopOf="@id/h3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="성별"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint2_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.68" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.72" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint2_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.77" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint2_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <EditText
+                    android:id="@+id/et_insert_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="모두"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint2_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint2_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="남성"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint2_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint2_h5"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint2_h6"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="여성"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint2_h7"
+                    app:layout_constraintRight_toRightOf="@id/constraint2_h8"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_diseaseType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toTopOf="@id/h4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="질환(유형)"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint3_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.64" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.68" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.72" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint3_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.81" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint3_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_disease_type"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="모두"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint3_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint3_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="Type 1"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint3_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint3_h5"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint3_h6"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="Type 2"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint3_h7"
+                    app:layout_constraintRight_toRightOf="@id/constraint3_h8"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_bp_shrinkage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toTopOf="@id/h5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="혈압(수축기)"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.294" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.38" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.614" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.714" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint4_h13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.96" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_min_bp_shrinkage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:src="@drawable/ic_resource__"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/constraint4_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_max_bp_shrinkage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="300"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:gravity="center_vertical"
+                    android:text="사이의 환자만"
+                    android:textColor="@color/textBlack"
+                    android:textSize="17dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h6"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h7"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="저혈압"
+                    android:textSize="16.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h8"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h9"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h9"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="저혈압 위험"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h9"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h10"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h10"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="보통 혈압"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h10"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h11"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h11"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="고혈압 위험"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h11"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h12"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint4_h12"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="고혈압"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint4_h12"
+                    app:layout_constraintRight_toRightOf="@id/constraint4_h13"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_bp_relaxation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toTopOf="@id/h6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="혈압(이완기)"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.294" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.38" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.614" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.713" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint5_h13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.96" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_min_bp_relaxation"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:src="@drawable/ic_resource__"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/constraint5_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_max_bp_relaxation"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="300"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:gravity="center_vertical"
+                    android:text="사이의 환자만"
+                    android:textColor="@color/textBlack"
+                    android:textSize="17dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h6"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h7"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="저혈압"
+                    android:textSize="16.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h8"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h9"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h9"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="저혈압 위험"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h9"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h10"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h10"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="보통 혈압"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h10"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h11"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h11"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="고혈압 위험"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h11"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h12"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint5_h12"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="고혈압"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint5_h12"
+                    app:layout_constraintRight_toRightOf="@id/constraint5_h13"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_visit_date"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toBottomOf="@id/h7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="미 내원 기간"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.62" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.71" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.80" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.89" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint6_h9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.96" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_visit_date"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="모두"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최근"
+                        android:textSize="12.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1주일"
+                        android:textSize="16.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h5"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h5"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최근"
+                        android:textSize="12.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1개월"
+                        android:textSize="16.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h6"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h6"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최근"
+                        android:textSize="12.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3개월"
+                        android:textSize="16.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h7"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h7"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최근"
+                        android:textSize="12.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6개월"
+                        android:textSize="16.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h8"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint6_h8"
+                    app:layout_constraintRight_toRightOf="@id/constraint6_h9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="직접"
+                        android:textSize="12.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="설정"
+                        android:textSize="16.5dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:textColor="#BCBCBC"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint6_h9"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayout_receive"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/filter_search_dialog_solid"
+                app:layout_constraintBottom_toBottomOf="@id/h8"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clayout_visit_date">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="요청"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/defalut_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint7_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.183" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.257" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.73" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/constraint7_h6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.96" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint7_h1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_insert_receive"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:gravity="center"
+                    android:text="모두"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint7_h2"
+                    app:layout_constraintRight_toRightOf="@id/constraint7_h3"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="요청에 응답한 환자만"
+                    android:textSize="16.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint7_h4"
+                    app:layout_constraintRight_toRightOf="@id/constraint7_h5"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="27dp"
+                    android:background="#BFBFBF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/constraint7_h5"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="요청에 응답하지 않은 환자만"
+                    android:textSize="16.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="#BCBCBC"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint7_h5"
+                    app:layout_constraintRight_toRightOf="@id/constraint7_h6"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.09" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.21" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.43" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.54" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.76" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_sex"
-            android:background="@drawable/filter_search_dialog_solid"
+            android:id="@+id/linear_bottom"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="7dp"
+            android:background="@drawable/filter_search_bottom_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/h3"
-            app:layout_constraintTop_toBottomOf="@id/clayout_age"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_diseaseType"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="7dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/clayout_sex"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_bp_shrinkage"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="7dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/clayout_diseaseType"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_bp_relaxation"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="7dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/clayout_visit_date"
-            app:layout_constraintTop_toBottomOf="@id/clayout_bp_shrinkage"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_visit_date"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="7dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/clayout_bp_relaxation"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clayout_receive"
-            android:background="@drawable/filter_search_dialog_solid"
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:layout_marginTop="7dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/clayout_visit_date"/>
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/h1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.1"
-            />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/h2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.225"
-            />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/h3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.34"
-            />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/h4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.34"
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="@id/h9">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="71.5dp"
-        android:background="#474747"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/h9"
-        app:layout_constraintBottom_toBottomOf="parent">
-    </LinearLayout>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="9.5dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_select_search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_select_search"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:gravity="center"
+                android:text="선택한 내용에 부합하는 환자 찾기"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/h9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.89"/>
+            app:layout_constraintGuide_percent="0.895" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

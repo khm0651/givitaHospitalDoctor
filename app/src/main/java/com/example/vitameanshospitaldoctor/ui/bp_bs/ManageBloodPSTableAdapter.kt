@@ -33,47 +33,59 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
     val differ = AsyncListDiffer(this,diffCallback)
 
     inner class ViewHolder(private val binding: ManageItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: userData) = with(item){
+        fun bind(item: userData) {
             binding.apply {
-                binding.root.setOnClickListener{ navigate() }
+                binding.root.setOnClickListener { navigate() }
                 val format = SimpleDateFormat("yy.MM.dd")
                 val format2 = SimpleDateFormat("yyMMdd")
 
-                noTv.text = id.toString()
-                nameTv.text = userName
-                genderTv.text =sex
-                ageTv.text = age.toString()
-                diseaseTv.text = diseaseType
-                bloodPressureTv.text = "${shrinkage}/${relaxation}"
-                bloodPressureDateTv.text = format2.format(bpRegistrationDate?.time)
-                bloodSugarTv.text = bloodSugar.toString()
-                bloodSugarDateTv.text = format2.format(bsRegistrationDate?.time)
-                latestVisitTv.text = format.format(lastVisitDate?.time)
-                requestDateTv.text = format.format(measureRequestDate?.time)
-                requestCheckTv.text = receiveOrNot
+                noTv.text = item.id.toString()
+                nameTv.text = item.userName
+                genderTv.text = item.sex
+                ageTv.text = item.age.toString()
+                diseaseTv.text = item.diseaseType
+                bloodPressureTv.text = "${item.shrinkage}/${item.relaxation}"
+                bloodPressureDateTv.text = format2.format(item.bpRegistrationDate?.time)
+                bloodSugarTv.text = item.bloodSugar.toString()
+                bloodSugarDateTv.text = format2.format(item.bsRegistrationDate?.time)
+                latestVisitTv.text = format.format(item.lastVisitDate?.time)
+                requestDateTv.text = format.format(item.measureRequestDate?.time)
+                requestCheckTv.text = item.receiveOrNot
 
-                if(receiveOrNot == "N"){
+                if(item.receiveOrNot == "Y" && item.canRegisterEMR){
+                    individualRegistrationBtn.background =
+                        mContext.getDrawable(R.drawable.all_radius_fill_grey_bg)
+                    individualRegistrationBtn.isEnabled = true
+                }else{
                     individualRegistrationBtn.setBackgroundColor(mContext.getColor(R.color.enable))
                     individualRegistrationBtn.isEnabled = false
-                }else{
-                    individualRegistrationBtn.background = mContext.getDrawable(R.drawable.all_radius_fill_grey_bg)
-                    individualRegistrationBtn.isEnabled = true
+                }
+
+                checkbox.isChecked = item.isChecked
+
+
+                checkbox.setOnCheckedChangeListener { buttonView, isChecked ->
+                    item.isChecked = isChecked
                 }
 
                 individualRegistrationBtn.setOnClickListener {
-                    it.showSnackbar("${userName}님의 정보를 EMR에 전송하였습니다",Snackbar.LENGTH_SHORT)
+                    item.canRegisterEMR = false
+                    it.showSnackbar("${item.userName}님의 정보를 EMR에 전송하였습니다", Snackbar.LENGTH_SHORT)
+                    notifyDataSetChanged()
                 }
 
                 requestBtn.setOnClickListener {
-                    it.showSnackbar("${userName}님께 측정요청을 보냈습니다",Snackbar.LENGTH_SHORT)
+                    it.showSnackbar("${item.userName}님께 측정요청을 보냈습니다", Snackbar.LENGTH_SHORT)
                 }
 
                 recommendBtn.setOnClickListener {
-                    it.showSnackbar("${userName}님께 식이/운동 추천을 보냈습니다",Snackbar.LENGTH_SHORT)
+                    it.showSnackbar("${item.userName}님께 식이/운동 추천을 보냈습니다", Snackbar.LENGTH_SHORT)
                 }
             }
         }
     }
+
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

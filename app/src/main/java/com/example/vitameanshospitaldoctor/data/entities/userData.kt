@@ -24,9 +24,12 @@ data class userData(
     @ColumnInfo(name = "bloodPressureState") var bloodPressureState: String?,
     @ColumnInfo(name = "lastVisitDate") var lastVisitDate: Calendar?,
     @ColumnInfo(name = "measureRequestDate") var measureRequestDate: Calendar?,
-    @ColumnInfo(name = "receiveOrNot") var receiveOrNot: String
+    @ColumnInfo(name = "receiveOrNot") var receiveOrNot: String = "N",
+    var canRegisterEMR: Boolean = false
 )
 {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
+    var isChecked: Boolean = false
+
 }

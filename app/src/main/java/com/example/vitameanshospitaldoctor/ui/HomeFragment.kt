@@ -1,5 +1,7 @@
 package com.example.vitameanshospitaldoctor.ui
 
+import android.graphics.Typeface
+import android.graphics.fonts.FontFamily
 import android.os.Bundle
 import android.view.Gravity
 import androidx.fragment.app.Fragment
@@ -41,7 +43,14 @@ class HomeFragment : Fragment() {
         }.attach()
 
         for(i in 0 until tabLayout.tabCount){
-            val view = (tabLayout.getChildAt(0) as ViewGroup).getChildAt(i)
+            val view = (tabLayout.getChildAt(0) as ViewGroup).getChildAt(i) as ViewGroup
+            for(j in 0 until tabLayout.tabCount){
+                var child = view.getChildAt(j)
+                if(child is TextView) {
+                    val tf = Typeface.createFromAsset(requireContext().assets,"font/spoqa_han_sans_neo_medium.otf")
+                    child.typeface = tf
+                }
+            }
             val param = view.layoutParams as ViewGroup.MarginLayoutParams
             param.rightMargin = Util.dpToPx(10f).toInt()
             val param2 = view.layoutParams

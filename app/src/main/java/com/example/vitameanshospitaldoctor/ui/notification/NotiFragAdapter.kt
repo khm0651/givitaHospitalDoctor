@@ -41,7 +41,7 @@ class NotiFragAdapter(val adapterOnClick : (Int) -> Unit) : RecyclerView.Adapter
         val item = differ.currentList[position]
 
         if(position > 0){
-            if(differ.currentList.elementAt(position-1).notiCalendar!=differ.currentList.elementAt(position).notiCalendar){
+            if(differ.currentList[position-1].notiCalendar!=differ.currentList[position].notiCalendar){
                 holder.visible()
             }
         }

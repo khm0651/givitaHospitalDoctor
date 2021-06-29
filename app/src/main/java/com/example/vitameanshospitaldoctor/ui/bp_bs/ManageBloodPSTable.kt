@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
+import com.example.vitameanshospitaldoctor.showSnackbar
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
@@ -34,10 +36,70 @@ class ManageBloodPSTable(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerView()
-
         setObserver()
+        setListener()
+//        setFakeData()
+    }
 
-        //     setFakeData()
+    private fun setListener() {
+        binding.apply {
+            btnAllCheck.setOnClickListener {
+                togleAllCheck()
+            }
+
+            btnEmrRegister.setOnClickListener {
+                var count = 0
+                for(item in adapter.differ.currentList){
+                    if(item.isChecked && item.canRegisterEMR) {
+                        count++
+                        item.canRegisterEMR = false
+                    }
+                }
+                it.showSnackbar("${count}명을 EMR에 등록하셨습니다",Snackbar.LENGTH_SHORT)
+                adapter.notifyDataSetChanged()
+            }
+
+            btnSendSelectPatient.setOnClickListener {
+                var count = 0
+                for(item in adapter.differ.currentList){
+                    if(item.isChecked) {
+                        count++
+                    }
+                }
+                it.showSnackbar("${count}명에게 측정요청을 하였습니다",Snackbar.LENGTH_SHORT)
+            }
+
+            btnRecommend.setOnClickListener {
+                var count = 0
+                for(item in adapter.differ.currentList){
+                    if(item.isChecked) {
+                        count++
+                    }
+                }
+                it.showSnackbar("${count}명에게 식이/운동 추천을 하였습니다",Snackbar.LENGTH_SHORT)
+            }
+        }
+
+    }
+
+    private fun togleAllCheck(){
+        if(isAllCheck()){
+            for(item in adapter.differ.currentList){
+                item.isChecked = false
+            }
+        }else{
+            for(item in adapter.differ.currentList){
+                item.isChecked = true
+            }
+        }
+        adapter.notifyDataSetChanged()
+    }
+
+    private fun isAllCheck(): Boolean {
+        for(item in adapter.differ.currentList){
+            if(!item.isChecked) return false
+        }
+        return true
     }
 
     private fun setObserver(){

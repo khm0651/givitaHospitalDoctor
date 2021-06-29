@@ -41,6 +41,7 @@
                     android:layout_marginLeft="6dp"
                     android:text="@string/vita_checkup"
                     android:textSize="@dimen/defalut_font_size"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
                     android:textColor="@color/default_text_color" />
 
                 <ImageView

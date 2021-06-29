@@ -31,6 +31,7 @@
             android:layout_height="26dp"
             android:text="TODAY"
             android:textSize="18dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"
             android:textColor="@color/black"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="7dp"

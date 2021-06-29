@@ -9,6 +9,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:textSize="28dp"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"
+        android:text="비만 환자 운동량/BMI 관리\n(준비중)"/>
 
 </FrameLayout>

@@ -9,7 +9,8 @@
     "bloodSugar": 190,
     "diseaseType": "정상",
     "bloodPressureState": "정상",
-    "receiveOrNot": "N"
+    "receiveOrNot": "N",
+    "canRegisterEMR": false
   },
   {
     "adminId": "qwrcot2ko",
@@ -21,7 +22,8 @@
     "bloodSugar": 240,
     "diseaseType": "2형",
     "bloodPressureState": "고혈압위험",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
     "adminId": "vkrld3kf4",
@@ -33,7 +35,8 @@
     "bloodSugar": 230,
     "diseaseType": "2형",
     "bloodPressureState": "고혈압1단계",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
     "adminId": "fi1kg4gkgl",
@@ -45,7 +48,8 @@
     "bloodSugar": 250,
     "diseaseType": "2형",
     "bloodPressureState": "저혈압",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
     "adminId": "zif983s3fi",
@@ -57,7 +61,8 @@
     "bloodSugar": 230,
     "diseaseType": "2형",
     "bloodPressureState": "저혈압위험",
-    "receiveOrNot": "N"
+    "receiveOrNot": "N",
+    "canRegisterEMR": false
   },
   {
     "adminId": "ywetasn4s23",
@@ -69,7 +74,8 @@
     "bloodSugar": 227,
     "diseaseType": "1형",
     "bloodPressureState": "정상",
-    "receiveOrNot": "N"
+    "receiveOrNot": "N",
+    "canRegisterEMR": false
   },
   {
     "adminId": "fujuktubmr",
@@ -81,7 +87,8 @@
     "bloodSugar": 178,
     "diseaseType": "정상",
     "bloodPressureState": "고혈압2단계",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
 
@@ -94,7 +101,8 @@
     "bloodSugar": 280,
     "diseaseType": "2형",
     "bloodPressureState": "고혈압위험",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
 
@@ -107,7 +115,8 @@
     "bloodSugar": 212,
     "diseaseType": "1형",
     "bloodPressureState": "고혈압위험",
-    "receiveOrNot": "Y"
+    "receiveOrNot": "Y",
+    "canRegisterEMR": true
   },
   {
 
@@ -120,6 +129,7 @@
     "bloodSugar": 169,
     "diseaseType": "정상",
     "bloodPressureState": "고혈압2단계",
-    "receiveOrNot": "N"
+    "receiveOrNot": "N",
+    "canRegisterEMR": false
   }
 ]

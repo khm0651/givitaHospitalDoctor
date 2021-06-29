@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,14 +9,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="550dp"
-        android:background="@color/noti_background">
+        android:layout_height="match_parent"
+        android:background="@color/noti_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
 
-        <LinearLayout
-            android:layout_width="220dp"
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="0dp"
             android:layout_height="1dp"
-            android:background="@color/black"
-            android:layout_marginTop="4dp"
+            android:background="#959595"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -27,27 +32,32 @@
             android:text="TODAY"
             android:textSize="18dp"
             android:textColor="@color/black"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="7dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/divide_line" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notiList"
-            android:layout_width="230dp"
-            android:layout_height="500dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="7dp"
-            android:layout_marginLeft="10dp"
             android:paddingLeft="10dp"
+            android:paddingBottom="15dp"
             android:scrollbarFadeDuration="0"
             android:scrollbarAlwaysDrawVerticalTrack="true"
             android:scrollbars="vertical"
             android:scrollbarSize="4dp"
             android:verticalScrollbarPosition="left"
             android:scrollbarStyle="outsideOverlay"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/today"
-            style="@style/scroll_custom"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/scroll_custom"
+            tool:listitem="@layout/fragment_notification_list_item_layout"
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

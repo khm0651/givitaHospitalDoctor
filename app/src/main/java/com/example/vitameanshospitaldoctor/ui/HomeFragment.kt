@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.databinding.FragmentHomeBinding
@@ -20,6 +21,7 @@ class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     lateinit var tabLayout: TabLayout
     lateinit var viewpager: ViewPager2
+    lateinit var drawerLayout: DrawerLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +30,10 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater,container,false)
         tabLayout = binding.tabs
         viewpager = binding.viewPager
-
+        drawerLayout = requireActivity().findViewById(R.id.drawer)
+        binding.toolbar.setOnClickListener {
+            drawerLayout.openDrawer(Gravity.LEFT)
+        }
         viewpager.adapter = ViewPagerAdapter(this)
         TabLayoutMediator(tabLayout,viewpager) { tab, pos ->
             tab.text = getTabTitle(pos)

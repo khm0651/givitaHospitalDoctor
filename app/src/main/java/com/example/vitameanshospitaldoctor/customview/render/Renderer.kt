@@ -1,4 +1,6 @@
 package com.example.vitameanshospitaldoctor.customview.render
 
-class Renderer {
+import com.example.vitameanshospitaldoctor.customview.utils.ViewPortHandler
+
+abstract class Renderer(var viewPortHandler: ViewPortHandler) {
 }

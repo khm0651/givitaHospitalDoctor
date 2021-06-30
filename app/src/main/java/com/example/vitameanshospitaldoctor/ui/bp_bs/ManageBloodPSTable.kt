@@ -1,18 +1,22 @@
 package com.example.vitameanshospitaldoctor.ui.bp_bs
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.vitameanshospitaldoctor.ui.ManageBloodPSTableVM
-import androidx.navigation.fragment.findNavController
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
+import com.example.vitameanshospitaldoctor.databinding.NameSearchDialogBinding
+import com.example.vitameanshospitaldoctor.dialog.FilterSearchDialog
+import com.example.vitameanshospitaldoctor.dialog.NameSearchDialog
 import com.example.vitameanshospitaldoctor.showSnackbar
+import com.example.vitameanshospitaldoctor.ui.ManageBloodPSTableVM
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
@@ -25,16 +29,25 @@ class ManageBloodPSTable(
     lateinit var binding: FragmentManageBloodPSTableBinding
     lateinit var adapter: ManageBloodPSTableAdapter
     private val viewModel: ManageBloodPSTableVM by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentManageBloodPSTableBinding.inflate(inflater,container,false)
+        binding.btnFilterSearch.setOnClickListener {
+            FilterSearchDialog().show(childFragmentManager, "FilterSearchDialog")
+        }
+        binding.btnNameSearch.setOnClickListener {
+            NameSearchDialog().show(childFragmentManager,"NameSearchDialog")
+        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setRecyclerView()
         setObserver()
         setListener()

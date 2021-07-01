@@ -9,7 +9,7 @@ import java.util.*
 
 @Entity
 @TypeConverters(Converters::class)
-data class bloodSugarData(
+data class BloodSugarData(
     val adminId: String,
     var measureDate: Calendar,
     val measurePoint: String,

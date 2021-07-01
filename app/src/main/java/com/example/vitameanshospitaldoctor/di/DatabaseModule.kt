@@ -2,9 +2,9 @@ package com.example.vitameanshospitaldoctor.di
 
 import android.content.Context
 import com.example.vitameanshospitaldoctor.data.AppDatabase
-import com.example.vitameanshospitaldoctor.data.dao.bloodPressureDataDao
-import com.example.vitameanshospitaldoctor.data.dao.bloodSugarDataDao
-import com.example.vitameanshospitaldoctor.data.dao.userDataDao
+import com.example.vitameanshospitaldoctor.data.dao.BloodPressureDataDao
+import com.example.vitameanshospitaldoctor.data.dao.BloodSugarDataDao
+import com.example.vitameanshospitaldoctor.data.dao.UserDataDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,12 +21,12 @@ class DatabaseModule {
     fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase = AppDatabase.getInstance(context)
 
     @Provides
-    fun provideUserDataDao(appDatabase: AppDatabase): userDataDao = appDatabase.userDataDao()
+    fun provideUserDataDao(appDatabase: AppDatabase): UserDataDao = appDatabase.userDataDao()
 
     @Provides
-    fun provideBloodSugarDataDao(appDatabase: AppDatabase): bloodSugarDataDao = appDatabase.bloodSugarDataDao()
+    fun provideBloodSugarDataDao(appDatabase: AppDatabase): BloodSugarDataDao = appDatabase.bloodSugarDataDao()
 
     @Provides
-    fun provideBloodPressureDataDao(appDatabase: AppDatabase): bloodPressureDataDao = appDatabase.bloodPressureDataDao()
+    fun provideBloodPressureDataDao(appDatabase: AppDatabase): BloodPressureDataDao = appDatabase.bloodPressureDataDao()
 
 }

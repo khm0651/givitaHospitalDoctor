@@ -1,4 +1,4 @@
-package com.example.vitameanshospitaldoctor.ui
+package com.example.vitameanshospitaldoctor.dialog
 
 import androidx.lifecycle.*
 import com.example.vitameanshospitaldoctor.data.entities.UserData
@@ -7,9 +7,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class ManageBloodPSTableVM @Inject constructor(
+class NameSearchDialogVM @Inject constructor(
     private val userRepos: UserRepos
 ) : ViewModel() {
-    val userList : LiveData<List<UserData>> = userRepos.getUsers().asLiveData()
+
+    var uName = MutableLiveData<String>()
+    var result: LiveData<List<UserData>> = Transformations.switchMap(uName){
+        userRepos.searchName(it).asLiveData()
+    }
 
 }

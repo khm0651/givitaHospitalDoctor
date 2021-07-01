@@ -1,16 +1,15 @@
 package com.example.vitameanshospitaldoctor.data
 
 import android.content.Context
-import androidx.room.TypeConverters
 
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.example.vitameanshospitaldoctor.BLOODPRESSURE_DATA_FILENAME
 import com.example.vitameanshospitaldoctor.BLOODSUGAR_DATA_FILENAME
 import com.example.vitameanshospitaldoctor.USER_DATA_FILENAME
-import com.example.vitameanshospitaldoctor.data.entities.bloodPressureData
-import com.example.vitameanshospitaldoctor.data.entities.bloodSugarData
-import com.example.vitameanshospitaldoctor.data.entities.userData
+import com.example.vitameanshospitaldoctor.data.entities.BloodPressureData
+import com.example.vitameanshospitaldoctor.data.entities.BloodSugarData
+import com.example.vitameanshospitaldoctor.data.entities.UserData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
@@ -34,8 +33,8 @@ class AppDatabaseWorker(
             applicationContext.assets.open(USER_DATA_FILENAME).use { inputStream ->
 
                 JsonReader(inputStream.reader()).use { jsonReader ->
-                    val userType = object : TypeToken<List<userData>>() {}.type
-                    val userList: List<userData> = Gson().fromJson(jsonReader, userType)
+                    val userType = object : TypeToken<List<UserData>>() {}.type
+                    val userList: List<UserData> = Gson().fromJson(jsonReader, userType)
                     for (i in 0..userList.size - 1) {
                         userList[i].measureRequestDate = Calendar.getInstance()
                         userList[i].createdDate = Calendar.getInstance()
@@ -53,8 +52,8 @@ class AppDatabaseWorker(
 
            applicationContext.assets.open(BLOODPRESSURE_DATA_FILENAME).use { inputStream ->
                 JsonReader(inputStream.reader()).use { jsonReader ->
-                    val bpType = object : TypeToken<List<bloodPressureData>>() {}.type
-                    val bpList: List<bloodPressureData> = Gson().fromJson(jsonReader, bpType)
+                    val bpType = object : TypeToken<List<BloodPressureData>>() {}.type
+                    val bpList: List<BloodPressureData> = Gson().fromJson(jsonReader, bpType)
                     for (i in 0..bpList.size - 1) {
                         bpList[i].measureDate = Calendar.getInstance()
                     }
@@ -66,8 +65,8 @@ class AppDatabaseWorker(
 
             applicationContext.assets.open(BLOODSUGAR_DATA_FILENAME).use { inputStream ->
                 JsonReader(inputStream.reader()).use { jsonReader ->
-                    val bsType = object : TypeToken<List<bloodSugarData>>() {}.type
-                    val bsList: List<bloodSugarData> = Gson().fromJson(jsonReader, bsType)
+                    val bsType = object : TypeToken<List<BloodSugarData>>() {}.type
+                    val bsList: List<BloodSugarData> = Gson().fromJson(jsonReader, bsType)
                     for (i in 0..bsList.size - 1) {
                         bsList[i].measureDate = Calendar.getInstance()
                     }

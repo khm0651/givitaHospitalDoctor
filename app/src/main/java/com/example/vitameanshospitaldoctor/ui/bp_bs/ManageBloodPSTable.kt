@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
-import com.example.vitameanshospitaldoctor.databinding.NameSearchDialogBinding
 import com.example.vitameanshospitaldoctor.dialog.FilterSearchDialog
 import com.example.vitameanshospitaldoctor.dialog.NameSearchDialog
 import com.example.vitameanshospitaldoctor.showSnackbar

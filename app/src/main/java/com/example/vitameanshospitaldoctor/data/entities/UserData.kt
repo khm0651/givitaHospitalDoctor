@@ -9,7 +9,7 @@ import java.util.*
 
 
 @Entity
-data class userData(
+data class UserData(
     @ColumnInfo(name = "adminId") val adminId: String,
     @ColumnInfo(name = "createdDate") var createdDate: Calendar,
     @ColumnInfo(name = "userName") var userName: String,

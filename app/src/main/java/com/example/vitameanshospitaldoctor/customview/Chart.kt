@@ -5,7 +5,7 @@ import android.graphics.RectF
 import android.view.ViewGroup
 import com.example.vitameanshospitaldoctor.customview.components.XAxis
 
-class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart<T> {
+class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart {
 
     var logEnabled: Boolean = false
 
@@ -57,20 +57,16 @@ class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart<T> {
         TODO("Not yet implemented")
     }
 
-    override fun getWidth() {
-        TODO("Not yet implemented")
-    }
-
-    override fun getHeight() {
-        TODO("Not yet implemented")
-    }
-
     override fun getContentRect(): RectF {
         TODO("Not yet implemented")
     }
 
 
     override fun getMaxVisibleCount(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun <T> getData(): T {
         TODO("Not yet implemented")
     }
 }

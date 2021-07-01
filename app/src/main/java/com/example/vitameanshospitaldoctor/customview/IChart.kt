@@ -2,7 +2,7 @@ package com.example.vitameanshospitaldoctor.customview
 
 import android.graphics.RectF
 
-interface IChart<T> {
+interface IChart {
 
     fun getXChartMin(): Float
 
@@ -16,11 +16,9 @@ interface IChart<T> {
 
     fun getMaxHighlightDistance()
 
-    fun getWidth()
-
-    fun getHeight()
-
     fun getContentRect(): RectF
 
     fun getMaxVisibleCount(): Int
+
+    fun <T> getData(): T
 }

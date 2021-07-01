@@ -20,4 +20,8 @@ interface IDataSet<T: Entry> {
     fun calcMinMaxY(fromX: Float, toX: Float)
 
     fun getHighLightColor()
+
+    fun isVisible(): Boolean
+
+    fun <T> getEntryForIndex(index: Int): T
 }

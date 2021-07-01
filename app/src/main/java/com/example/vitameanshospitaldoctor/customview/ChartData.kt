@@ -51,13 +51,11 @@ abstract class ChartData<T: IDataSet<out Entry>>{
         if(yMin > dataSet.getYMin()) yMin = dataSet.getYMin()
         if(xMax < dataSet.getXMax()) xMax = dataSet.getXMax()
         if(xMin > dataSet.getXMin()) xMin = dataSet.getXMin()
-
-
-
-
-
-
     }
 
+    fun getDataSetByIndex(index: Int): T?{
+        if(index < 0 || index >= datasets.size) return null
+        return datasets[index]
+    }
 
 }

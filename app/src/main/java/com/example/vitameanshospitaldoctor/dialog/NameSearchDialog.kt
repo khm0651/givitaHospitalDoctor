@@ -22,27 +22,37 @@ import com.example.vitameanshospitaldoctor.ui.bp_bs.ManageBloodPSTableAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class NameSearchDialog : DialogFragment(){
+class NameSearchDialog : DialogFragment() {
     private var _binding: NameSearchDialogBinding? = null
     private val binding get() = _binding!!
     private val viewModel: NameSearchDialogVM by viewModels()
     lateinit var adapter: NameSearchAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = NameSearchDialogBinding.inflate(inflater,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = NameSearchDialogBinding.inflate(inflater, container, false)
         val view = binding.root
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         binding.ivCancel.setOnClickListener {
             dismiss()
         }
 
+        binding.tvResult.alpha = 0.0f
+        binding.linearHead.alpha = 0.0f
         binding.etName.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
-                viewModel.uName.value= binding.etName.text.toString()
-            }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.uName.value = binding.etName.text.toString()
+                binding.tvResult.alpha = 1f
+                binding.linearHead.alpha = 1f
 
             }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
@@ -53,9 +63,11 @@ class NameSearchDialog : DialogFragment(){
 
         return view
     }
+
     override fun onResume() {
         super.onResume()
-        val windowManager = requireActivity().getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        val windowManager =
+            requireActivity().getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val display = windowManager.defaultDisplay
         val size = Point()
         display.getSize(size)
@@ -65,11 +77,14 @@ class NameSearchDialog : DialogFragment(){
         dialog?.window?.attributes = params as WindowManager.LayoutParams
     }
 
-    private fun setObserver(){
-        viewModel.result.observe(viewLifecycleOwner,{
+    private fun setObserver() {
+        viewModel.result.observe(viewLifecycleOwner, {
             adapter.differ.submitList(it)
+            binding.tvResult.text="검색결과 ${it.size} 건"
+
         })
     }
+
     private fun setRecyclerView() {
         adapter = NameSearchAdapter()
         binding.apply {

@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitameanshospitaldoctor.R
-import com.example.vitameanshospitaldoctor.data.Patient
-import com.example.vitameanshospitaldoctor.data.entities.userData
+import com.example.vitameanshospitaldoctor.data.entities.UserData
 import com.example.vitameanshospitaldoctor.databinding.ManageItemLayoutBinding
 import com.example.vitameanshospitaldoctor.showSnackbar
 import com.google.android.material.snackbar.Snackbar
@@ -19,12 +18,12 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
 
     private lateinit var mContext: Context
 
-    private val diffCallback = object : DiffUtil.ItemCallback<userData>(){
-        override fun areItemsTheSame(oldItem: userData, newItem: userData): Boolean {
+    private val diffCallback = object : DiffUtil.ItemCallback<UserData>(){
+        override fun areItemsTheSame(oldItem: UserData, newItem: UserData): Boolean {
             return oldItem.adminId == newItem.adminId
         }
 
-        override fun areContentsTheSame(oldItem: userData, newItem: userData): Boolean {
+        override fun areContentsTheSame(oldItem: UserData, newItem: UserData): Boolean {
             return oldItem == newItem
         }
 
@@ -33,7 +32,7 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
     val differ = AsyncListDiffer(this,diffCallback)
 
     inner class ViewHolder(private val binding: ManageItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: userData) {
+        fun bind(item: UserData) {
             binding.apply {
                 binding.root.setOnClickListener { navigate() }
                 val format = SimpleDateFormat("yy.MM.dd")

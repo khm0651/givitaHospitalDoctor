@@ -2,7 +2,6 @@ package com.example.vitameanshospitaldoctor.data
 
 
 import android.content.Context
-import android.service.autofill.UserData
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -10,27 +9,27 @@ import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import com.example.vitameanshospitaldoctor.data.dao.bloodPressureDataDao
-import com.example.vitameanshospitaldoctor.data.dao.bloodSugarDataDao
-import com.example.vitameanshospitaldoctor.data.dao.userDataDao
-import com.example.vitameanshospitaldoctor.data.entities.bloodPressureData
-import com.example.vitameanshospitaldoctor.data.entities.bloodSugarData
-import com.example.vitameanshospitaldoctor.data.entities.userData
+import com.example.vitameanshospitaldoctor.data.dao.BloodPressureDataDao
+import com.example.vitameanshospitaldoctor.data.dao.BloodSugarDataDao
+import com.example.vitameanshospitaldoctor.data.dao.UserDataDao
+import com.example.vitameanshospitaldoctor.data.entities.BloodPressureData
+import com.example.vitameanshospitaldoctor.data.entities.BloodSugarData
+import com.example.vitameanshospitaldoctor.data.entities.UserData
 
 @Database(
     entities = [
-        bloodSugarData::class,
-        bloodPressureData::class,
-        userData::class
+        BloodSugarData::class,
+        BloodPressureData::class,
+        UserData::class
     ],
     version = 1,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDataDao(): userDataDao
-    abstract fun bloodPressureDataDao(): bloodPressureDataDao
-    abstract fun bloodSugarDataDao(): bloodSugarDataDao
+    abstract fun userDataDao(): UserDataDao
+    abstract fun bloodPressureDataDao(): BloodPressureDataDao
+    abstract fun bloodSugarDataDao(): BloodSugarDataDao
 
 
     companion object {

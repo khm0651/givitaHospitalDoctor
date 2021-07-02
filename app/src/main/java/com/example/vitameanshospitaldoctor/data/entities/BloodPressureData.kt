@@ -9,7 +9,7 @@ import java.util.*
 
 @Entity
 @TypeConverters(Converters::class)
-data class bloodPressureData(
+data class BloodPressureData(
     @ColumnInfo(name = "adminId") val adminId: String,
     @ColumnInfo(name ="measureDate") var measureDate: Calendar,
     @ColumnInfo(name ="measurePoint") val measurePoint: String,

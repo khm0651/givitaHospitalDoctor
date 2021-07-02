@@ -29,7 +29,7 @@ class NameSearchDialog : DialogFragment() {
     lateinit var adapter: NameSearchAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater,
+        inflater: LayoutInflater
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

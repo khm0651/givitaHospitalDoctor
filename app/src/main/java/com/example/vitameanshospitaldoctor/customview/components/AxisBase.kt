@@ -1,6 +1,7 @@
 package com.example.vitameanshospitaldoctor.customview.components
 
 import android.graphics.Color
+import com.example.vitameanshospitaldoctor.customview.IAxisValueFormatter
 
 abstract class AxisBase {
 
@@ -20,5 +21,14 @@ abstract class AxisBase {
 
     var xOffset = 5f
 
+    lateinit var axisValueFormatter: IAxisValueFormatter
+
+
+    fun setValueFormatter(f: IAxisValueFormatter){
+        axisValueFormatter = f
+    }
+    fun getValueFormatter(): IAxisValueFormatter{
+        return axisValueFormatter
+    }
 
 }

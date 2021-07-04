@@ -22,7 +22,6 @@ class ManageBloodPSFrag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentManageBloodPSBinding.inflate(inflater,container,false)
-
         return binding.root
     }
 

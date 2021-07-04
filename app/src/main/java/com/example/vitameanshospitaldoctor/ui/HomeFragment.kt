@@ -30,18 +30,27 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater,container,false)
-        tabLayout = binding.tabs
-        viewpager = binding.viewPager
-        drawerLayout = requireActivity().findViewById(R.id.drawer)
-        binding.toolbar.setOnClickListener {
-            drawerLayout.openDrawer(Gravity.LEFT)
-        }
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+        setListener()
+        setViewPager()
+    }
+
+    private fun setViewPager() {
         viewpager.adapter = ViewPagerAdapter(this)
         TabLayoutMediator(tabLayout,viewpager) { tab, pos ->
             tab.text = getTabTitle(pos)
             tab.view.gravity = Gravity.CENTER_VERTICAL
         }.attach()
 
+        setViewPagerConfig()
+    }
+
+    private fun setViewPagerConfig() {
         for(i in 0 until tabLayout.tabCount){
             val view = (tabLayout.getChildAt(0) as ViewGroup).getChildAt(i) as ViewGroup
             for(j in 0 until tabLayout.tabCount){
@@ -57,7 +66,23 @@ class HomeFragment : Fragment() {
             param2.width = Util.dpToPx(286f).toInt()
             view.requestLayout()
         }
-        return binding.root
+    }
+
+    private fun setListener() {
+        binding.apply {
+            toolbar.setOnClickListener {
+                drawerLayout.openDrawer(Gravity.LEFT)
+            }
+        }
+    }
+
+    private fun init() {
+        drawerLayout = requireActivity().findViewById(R.id.drawer)
+
+        binding.apply {
+            tabLayout = tabs
+            viewpager = viewPager
+        }
     }
 
     private fun getTabTitle(position: Int): String? {

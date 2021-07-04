@@ -26,7 +26,7 @@ class YAxis(position: AxisDependency = AxisDependency.LEFT) : AxisBase() {
 
     var position: YAxisLabelPosition = YAxisLabelPosition.OUTSIDE_CHART
 
-    var xlabelOffset = 0f
+    var xLabelOffset = 0f
 
     var axisDependency: AxisDependency = position
 
@@ -38,6 +38,19 @@ class YAxis(position: AxisDependency = AxisDependency.LEFT) : AxisBase() {
         yOffset = 0f
     }
 
+    fun isDrawBottomYLabelEntryEnabled(): Boolean{
+        return drawBottomYLabelEntry
+    }
+
+    fun isDrawTopYLabelEntryEnabled(): Boolean{
+        return drawTopYLabelEntry
+    }
+
+    fun getFormattedLabel(index: Int): String{
+
+        return if(index<0 || index>= entries.size) ""
+        else getValueFormatter().getFormattedValue(entries[index], this)
+    }
 
     enum class AxisDependency{
         LEFT, RIGHT

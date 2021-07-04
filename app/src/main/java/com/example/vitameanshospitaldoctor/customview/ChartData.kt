@@ -58,4 +58,8 @@ abstract class ChartData<T: IDataSet<out Entry>>{
         return datasets[index]
     }
 
+    fun getEntryCount(): Int{
+        return datasets.size
+    }
+
 }

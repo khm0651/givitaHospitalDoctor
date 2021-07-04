@@ -18,6 +18,10 @@ class XAxis() : AxisBase() {
 
     var position: XAxisPostion = XAxisPostion.TOP
 
+    var spaceMin = 0f
+
+    var spaceMax = 0f
+
     init {
         yOffset = Util.dpToPx(4f)
     }
@@ -25,4 +29,6 @@ class XAxis() : AxisBase() {
     enum class XAxisPostion{
         TOP, BOTTOM, BOTH_SIDED, TOP_INSIDE, BOTTOM_INSIDE
     }
+
+
 }

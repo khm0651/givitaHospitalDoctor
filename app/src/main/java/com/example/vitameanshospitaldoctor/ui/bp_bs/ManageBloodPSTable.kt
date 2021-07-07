@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,8 @@ import com.example.vitameanshospitaldoctor.data.Patient
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
 import com.example.vitameanshospitaldoctor.dialog.FilterSearchDialog
 import com.example.vitameanshospitaldoctor.dialog.NameSearchDialog
+import com.example.vitameanshospitaldoctor.dialog.OtherRecommendDialog
+import com.example.vitameanshospitaldoctor.dialog.PersonRecommendDialog
 import com.example.vitameanshospitaldoctor.showSnackbar
 import com.example.vitameanshospitaldoctor.ui.ManageBloodPSTableVM
 import com.google.android.material.snackbar.Snackbar
@@ -39,6 +42,9 @@ class ManageBloodPSTable(
         }
         binding.btnNameSearch.setOnClickListener {
             NameSearchDialog().show(childFragmentManager,"NameSearchDialog")
+        }
+        binding.btnRecommend.setOnClickListener {
+            OtherRecommendDialog().show(childFragmentManager,"OtherRecommendDialog")
         }
         return binding.root
     }
@@ -80,15 +86,15 @@ class ManageBloodPSTable(
                 it.showSnackbar("${count}명에게 측정요청을 하였습니다",Snackbar.LENGTH_SHORT)
             }
 
-            btnRecommend.setOnClickListener {
-                var count = 0
-                for(item in adapter.differ.currentList){
-                    if(item.isChecked) {
-                        count++
-                    }
-                }
-                it.showSnackbar("${count}명에게 식이/운동 추천을 하였습니다",Snackbar.LENGTH_SHORT)
-            }
+//            btnRecommend.setOnClickListener {
+//                var count = 0
+//                for(item in adapter.differ.currentList){
+//                    if(item.isChecked) {
+//                        count++
+//                    }
+//                }
+//                it.showSnackbar("${count}명에게 식이/운동 추천을 하였습니다",Snackbar.LENGTH_SHORT)
+//            }
         }
 
     }
@@ -136,11 +142,10 @@ class ManageBloodPSTable(
         list.add(Patient(36777,"asdf321",c,"김남준","남",42,"2형",130,89,c,88,c,c,c,"Y"))
         list.add(Patient(36776,"1dasdzx2",c,"최다울","남",36,"1형",130,97,c,95,c,c,c,"Y"))
         list.add(Patient(36775,"dffs3adf",c,"진정환","남",29,"3형",130,99,c,85,c,c,c,"Y"))*/
-
     }
 
     private fun setRecyclerView() {
-        adapter = ManageBloodPSTableAdapter{ findNavController().navigate(R.id.action_manageBloodPSTable_to_detailInfoFrag) }
+        adapter = ManageBloodPSTableAdapter(childFragmentManager){ findNavController().navigate(R.id.action_manageBloodPSTable_to_detailInfoFrag)}
         binding.apply {
             manageRv.layoutManager = LinearLayoutManager(requireContext())
             manageRv.setHasFixedSize(true)

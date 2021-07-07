@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="75dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_name_search_solid">
+
+            <TextView
+                android:id="@+id/other_recommend_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="환자분께 운동/식이에 대해 일괄 추천해주세요"
+                android:textSize="20dp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="32.5dp"
+                android:layout_marginRight="635.5dp"
+                android:layout_marginBottom="621.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38.5dp"
+                android:layout_marginTop="62.5dp"
+                android:layout_marginRight="728.5dp"
+                android:layout_marginBottom="599dp"
+                android:text="선택된 67분의 환자 모두에게 일괄 추천합니다"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/other_exit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_x"
+                android:layout_marginLeft="977.5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="618.5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="313dp"
+                android:layout_height="480dp"
+                android:layout_marginLeft="34.5dp"
+                android:layout_marginTop="106dp"
+                android:layout_marginRight="697.5dp"
+                android:layout_marginBottom="98dp"
+                android:paddingTop="31dp"
+                android:paddingLeft="17dp"
+                android:background="@drawable/recommend_layout_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/other_recommend_layout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="어떤 환자에게"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="@color/textBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추천할까요?"
+                    android:textSize="17.5dp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                    android:textColor="@color/textBlack" />
+
+                <LinearLayout
+                    android:id="@+id/other_recommend_lines"
+                    android:layout_width="276dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:background="@color/recommend_line" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="22.5dp"
+                    android:layout_marginTop="19.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택한 모든 환자"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/other_info_bloodpressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수축기 혈압"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/other_info_bloodpressure_layout"
+                        android:layout_width="72dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/recommend_other_solid"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/other_info_bloodpressure"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="~"
+                            android:textColor="@color/recommend_wave"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="300"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사이 환자"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:layout_marginLeft="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/other_info_bloodpressure_layout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/other_info_bloodpressure2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이완기 혈압"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/other_info_bloodpressure2_layout"
+                        android:layout_width="72dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/recommend_other_solid"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/other_info_bloodpressure2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="~"
+                            android:textColor="@color/recommend_wave"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="300"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사이 환자"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:layout_marginLeft="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/other_info_bloodpressure2_layout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/switch_track_selector"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="22.5dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="고혈압 환자"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="22.5dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="고혈압 위험 환자"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="22.5dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저혈압 환자"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track_selector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="276dp"
+                    android:layout_height="22.5dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저혈압 위험 환자"
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/switch_track_selector"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogBoxCustom
+                android:id="@+id/other_recommend_box2"
+                android:layout_width="313dp"
+                android:layout_height="480dp"
+                android:layout_marginLeft="438.5dp"
+                android:layout_marginTop="181.5dp"
+                android:layout_marginRight="442dp"
+                android:layout_marginBottom="173dp"
+                app:text_what="어떤 운동을"
+                app:text_first="모든 운동"
+                app:text_second="걷기"
+                app:text_third="조깅"
+                app:text_four="근력"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogBoxCustom
+                android:id="@+id/other_recommend_box"
+                android:layout_width="313dp"
+                android:layout_height="480dp"
+                android:layout_marginLeft="693dp"
+                android:layout_marginTop="106dp"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="98dp"
+                app:text_what="어떤 식이를"
+                app:text_first="전체 조절 권유"
+                app:text_second="탄수화물 조절"
+                app:text_third="단백질 조절"
+                app:text_four="당분 조절"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/other_linear_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/filter_search_bottom_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_guide2">
+
+            <TextView
+                android:id="@+id/other_tv_select_search"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:gravity="center"
+                android:text="선택한 운동/식이 추천"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/button_guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.895" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

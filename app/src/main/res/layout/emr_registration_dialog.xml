@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_name_search_solid">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="7dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:gravity="bottom"
+            android:text="EMR 등록 안내"
+            android:textColor="@color/textBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/h1"
+            app:layout_constraintLeft_toLeftOf="@id/h2"
+            app:layout_constraintRight_toRightOf="@+id/h3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_x"
+            app:layout_constraintBottom_toBottomOf="@id/h1"
+            app:layout_constraintRight_toRightOf="@id/h4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:textColor="@color/textBlack"
+            android:textSize="115dp"
+            android:text="전송완료"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="@id/h1_2"
+            app:layout_constraintLeft_toLeftOf="@id/h2"
+            app:layout_constraintRight_toRightOf="@id/h4"
+            app:layout_constraintTop_toTopOf="@id/h1" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:text="선택한 67명의 환자 중 기록되지 않은 혈압 혈당 정보를 가진"
+            android:textColor="#4B4B4B"
+            android:textSize="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h1_3" />
+        <TextView
+            android:id="@+id/tv_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:text="63명의 기록 177건을 EMR로 전송하였습니다."
+            android:textColor="#4B4B4B"
+            android:textSize="45dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:text="EMR에서 이 후 등록을 마저 진행 해주세요"
+            android:textColor="#4B4B4B"
+            android:textSize="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result2" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/filter_search_bottom_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h1_4">
+            <TextView
+                android:id="@+id/tv_select_search"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:gravity="center"
+                android:text="닫기"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

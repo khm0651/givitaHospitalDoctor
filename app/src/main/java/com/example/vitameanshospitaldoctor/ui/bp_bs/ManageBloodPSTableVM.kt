@@ -1,4 +1,4 @@
-package com.example.vitameanshospitaldoctor.ui
+package com.example.vitameanshospitaldoctor.ui.bp_bs
 
 import androidx.lifecycle.*
 import com.example.vitameanshospitaldoctor.data.entities.UserData

@@ -10,11 +10,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.Patient
+import com.example.vitameanshospitaldoctor.data.entities.UserData
 import com.example.vitameanshospitaldoctor.databinding.FragmentManageBloodPSTableBinding
+import com.example.vitameanshospitaldoctor.dialog.EmrRegistrationDialog
 import com.example.vitameanshospitaldoctor.dialog.FilterSearchDialog
 import com.example.vitameanshospitaldoctor.dialog.NameSearchDialog
 import com.example.vitameanshospitaldoctor.showSnackbar
-import com.example.vitameanshospitaldoctor.ui.ManageBloodPSTableVM
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
@@ -27,25 +28,34 @@ class ManageBloodPSTable(
     lateinit var binding: FragmentManageBloodPSTableBinding
     lateinit var adapter: ManageBloodPSTableAdapter
     private val viewModel: ManageBloodPSTableVM by viewModels()
-
+    private var filterSearchDialog = FilterSearchDialog()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         binding = FragmentManageBloodPSTableBinding.inflate(inflater,container,false)
+
+
         binding.btnFilterSearch.setOnClickListener {
-            FilterSearchDialog().show(childFragmentManager, "FilterSearchDialog")
+            filterSearchDialog.show(childFragmentManager, "FilterSearchDialog")
         }
+
         binding.btnNameSearch.setOnClickListener {
             NameSearchDialog().show(childFragmentManager,"NameSearchDialog")
         }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        filterSearchDialog.setOnClickedListener(object : FilterSearchDialog.btnClickListener{
+            override fun onClicked(userData: List<UserData>?) {
+                adapter.differ.submitList(userData)
+                adapter.notifyDataSetChanged()
+            }
+        })
         setRecyclerView()
         setObserver()
         setListener()
@@ -66,7 +76,7 @@ class ManageBloodPSTable(
                         item.canRegisterEMR = false
                     }
                 }
-                it.showSnackbar("${count}명을 EMR에 등록하셨습니다",Snackbar.LENGTH_SHORT)
+                EmrRegistrationDialog(count).show(childFragmentManager,"NameSearchDialog")
                 adapter.notifyDataSetChanged()
             }
 

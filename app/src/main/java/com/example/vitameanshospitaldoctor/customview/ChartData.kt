@@ -1,5 +1,7 @@
 package com.example.vitameanshospitaldoctor.customview
 
+import com.example.vitameanshospitaldoctor.customview.components.YAxis
+
 abstract class ChartData<T: IDataSet<out Entry>>{
 
     var yMax: Float = -Float.MAX_VALUE
@@ -31,7 +33,39 @@ abstract class ChartData<T: IDataSet<out Entry>>{
         return list
     }
 
-    private fun notifyDataChanged() { calcMinMax() }
+    fun getYMin(axis: YAxis.AxisDependency): Float{
+        return if (axis == YAxis.AxisDependency.LEFT) {
+            if (leftAxisMin == Float.MAX_VALUE) {
+                rightAxisMin
+            } else {
+                leftAxisMin
+            }
+        } else {
+            if (rightAxisMin == Float.MAX_VALUE) {
+                leftAxisMin
+            } else {
+                rightAxisMin
+            }
+        }
+    }
+
+    fun getYMax(axis: YAxis.AxisDependency): Float{
+        return if (axis == YAxis.AxisDependency.LEFT) {
+            if (leftAxisMax == -Float.MAX_VALUE) {
+                rightAxisMax
+            } else {
+                leftAxisMax
+            }
+        } else {
+            if (rightAxisMax == -Float.MAX_VALUE) {
+                leftAxisMax
+            } else{
+                rightAxisMax
+            }
+        }
+    }
+
+    fun notifyDataChanged() { calcMinMax() }
 
     private fun calcMinMax() {
 
@@ -43,14 +77,73 @@ abstract class ChartData<T: IDataSet<out Entry>>{
         for(dataSet in datasets){
             calcMinMax(dataSet)
         }
+
+        leftAxisMax = -Float.MAX_VALUE
+        leftAxisMin = Float.MAX_VALUE
+        rightAxisMax = -Float.MAX_VALUE
+        rightAxisMin = Float.MAX_VALUE
+
+        var firstLeft: T? = getFirstLeft(datasets)
+
+        firstLeft?.let {
+
+            leftAxisMax = firstLeft.yMax
+            leftAxisMin = firstLeft.yMin
+
+            for(data in datasets){
+                if(data.axisDependency == YAxis.AxisDependency.LEFT){
+                    if(data.yMin < leftAxisMin) leftAxisMin = data.yMin
+                    if(data.yMax > leftAxisMax) leftAxisMax = data.yMax
+                }
+            }
+        }
+
+        var firstRight = getFirstRight(datasets)
+
+        firstRight?.let {
+
+            rightAxisMax = firstRight.yMax
+            rightAxisMin = firstRight.yMin
+
+            for(data in datasets){
+                if(data.axisDependency == YAxis.AxisDependency.RIGHT){
+                    if(data.yMin < rightAxisMin) rightAxisMin = data.yMin
+                    if(data.yMax > rightAxisMax) rightAxisMax = data.yMax
+                }
+            }
+        }
+    }
+
+    private fun getFirstRight(datasets: List<T>): T? {
+        for(data in datasets){
+            if(data.axisDependency == YAxis.AxisDependency.RIGHT)
+                return data
+        }
+        return null
+    }
+
+    private fun getFirstLeft(datasets: List<T>): T? {
+        for(data in datasets){
+            if(data.axisDependency == YAxis.AxisDependency.LEFT)
+                return data
+        }
+        return null
     }
 
     private fun calcMinMax(dataSet: T) {
 
-        if(yMax < dataSet.getYMax()) yMax = dataSet.getYMax()
-        if(yMin > dataSet.getYMin()) yMin = dataSet.getYMin()
-        if(xMax < dataSet.getXMax()) xMax = dataSet.getXMax()
-        if(xMin > dataSet.getXMin()) xMin = dataSet.getXMin()
+        if(yMax < dataSet.yMax) yMax = dataSet.yMax
+        if(yMin > dataSet.yMin) yMin = dataSet.yMin
+        if(xMax < dataSet.xMax) xMax = dataSet.xMax
+        if(xMin > dataSet.xMin) xMin = dataSet.xMin
+
+        if(dataSet.axisDependency == YAxis.AxisDependency.LEFT){
+            if(leftAxisMax < dataSet.yMax) leftAxisMax = dataSet.yMax
+            if(leftAxisMin > dataSet.yMin) leftAxisMin = dataSet.yMin
+        }else{
+            if(rightAxisMax < dataSet.yMax) rightAxisMax = dataSet.yMax
+            if(rightAxisMin > dataSet.yMin) rightAxisMin = dataSet.yMin
+        }
     }
 
     fun getDataSetByIndex(index: Int): T?{

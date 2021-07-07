@@ -12,9 +12,5 @@ interface IBarDataSet: IDataSet<BarEntry>  {
 
     fun getHighLightAlpha(): Int
 
-    fun getAxisDependency(): YAxis.AxisDependency
-
-
-
 
 }

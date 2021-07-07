@@ -10,6 +10,18 @@ class BarDataSet(
 
     var highLightColor = Color.rgb(255,187,115)
 
+    override fun calcMinMax(e: BarEntry) {
+
+        if(!e.y.isNaN()){
+
+            if(e.y < yMin) yMin = e.y
+
+            if(e.y > yMax) yMax = e.y
+
+            calcMinMaxX(e)
+        }
+    }
+
     override fun getBarShadowColor(): Int {
         TODO("Not yet implemented")
     }
@@ -23,10 +35,6 @@ class BarDataSet(
     }
 
     override fun getHighLightAlpha(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun getAxisDependency(): YAxis.AxisDependency {
         TODO("Not yet implemented")
     }
 

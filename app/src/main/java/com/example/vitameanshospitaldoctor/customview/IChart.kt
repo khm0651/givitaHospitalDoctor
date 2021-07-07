@@ -18,7 +18,5 @@ interface IChart {
 
     fun getContentRect(): RectF
 
-    fun getMaxVisibleCount(): Int
 
-    fun <T> getData(): T
 }

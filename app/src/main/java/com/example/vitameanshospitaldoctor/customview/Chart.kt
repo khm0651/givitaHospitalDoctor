@@ -126,7 +126,7 @@ abstract class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart {
 //        invalidate()
 //    }
 
-    private fun setChartData(data: T) {
+    fun setChartData(data: T) {
         this.data = data
         offSetCalculated = false
 
@@ -140,6 +140,8 @@ abstract class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart {
 
     abstract fun notifyDataSetChanged()
 
+    abstract fun calculateOffsets()
+
     private fun setupDefaultFormatter(min: Float, max: Float) {
 
         var reference = 0f
@@ -152,49 +154,46 @@ abstract class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart {
 
     }
 
-    override fun onDraw(canvas: Canvas?) {
-
-
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        TODO("Not yet implemented")
+        for(i in 0 until childCount){
+            getChildAt(i).layout(l,t,r,b)
+        }
     }
 
     override fun getXChartMin(): Float {
-        TODO("Not yet implemented")
+        return 0f
     }
 
     override fun getXChartMax(): Float {
-        TODO("Not yet implemented")
+        return 0f
     }
 
     override fun getXRange(): Float {
-        TODO("Not yet implemented")
+        return 0f
     }
 
     override fun getYChartMin(): Float {
-        TODO("Not yet implemented")
+        return 0f
     }
 
     override fun getYChartMax(): Float {
-        TODO("Not yet implemented")
+        return 0f
     }
 
     override fun getMaxHighlightDistance() {
-        TODO("Not yet implemented")
+
     }
 
     override fun getContentRect(): RectF {
-        TODO("Not yet implemented")
+        return RectF()
     }
 
 
-    override fun getMaxVisibleCount(): Int {
-        TODO("Not yet implemented")
-    }
 
-    override fun <T> getData(): T {
-        TODO("Not yet implemented")
-    }
+
+
 }

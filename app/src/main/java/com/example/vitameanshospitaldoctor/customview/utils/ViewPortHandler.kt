@@ -43,7 +43,23 @@ class ViewPortHandler {
         return contentRect.left <= x + 1
     }
 
+    fun isInBoundsX(x: Float): Boolean{
+        return isInBoundsLeft(x) && isInBoundsRight(x)
+    }
+
     fun isInBoundsRight(x: Float): Boolean{
         return contentRect.right >= ((x * 100f).toInt() / 100f) - 1
+    }
+
+    fun isFullyZoomedOutY(): Boolean{
+        return !(scaleY > minScaleY || minScaleY > 1f)
+    }
+
+    fun restrainViewPort(offsetLeft: Float, offsetTop: Float, offsetRight: Float, offsetBottom: Float){
+        contentRect.set(offsetLeft,offsetTop, chartWidth - offsetRight, chartHeight - offsetBottom)
+    }
+
+    fun offsetBottom(): Float {
+        return chartHeight - contentRect.bottom
     }
 }

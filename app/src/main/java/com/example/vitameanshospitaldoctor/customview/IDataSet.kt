@@ -1,14 +1,18 @@
 package com.example.vitameanshospitaldoctor.customview
 
+import com.example.vitameanshospitaldoctor.customview.components.YAxis
+
 interface IDataSet<T: Entry> {
 
-    fun getYMin(): Float
+    var yMin: Float
 
-    fun getYMax(): Float
+    var yMax: Float
 
-    fun getXMin(): Float
+    var xMin: Float
 
-    fun getXMax(): Float
+    var xMax: Float
+
+    var axisDependency: YAxis.AxisDependency
 
     fun getEntryCount(): Int
 

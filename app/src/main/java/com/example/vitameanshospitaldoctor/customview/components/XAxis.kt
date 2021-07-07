@@ -1,8 +1,9 @@
 package com.example.vitameanshospitaldoctor.customview.components
 
 import com.example.vitameanshospitaldoctor.utils.Util
+import kotlin.math.abs
 
-class XAxis() : AxisBase() {
+class XAxis : AxisBase() {
 
     var labelWidth = 1
 
@@ -18,9 +19,7 @@ class XAxis() : AxisBase() {
 
     var position: XAxisPostion = XAxisPostion.TOP
 
-    var spaceMin = 0f
-
-    var spaceMax = 0f
+    var limitLines = ArrayList<LimitLine>()
 
     init {
         yOffset = Util.dpToPx(4f)
@@ -29,6 +28,7 @@ class XAxis() : AxisBase() {
     enum class XAxisPostion{
         TOP, BOTTOM, BOTH_SIDED, TOP_INSIDE, BOTTOM_INSIDE
     }
+
 
 
 }

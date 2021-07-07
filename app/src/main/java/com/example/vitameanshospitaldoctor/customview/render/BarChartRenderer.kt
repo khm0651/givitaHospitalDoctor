@@ -51,7 +51,7 @@ class BarChartRenderer(
     }
 
     fun drawDataSet(c: Canvas, dataSet: IBarDataSet, index: Int){
-        val trans = chart.getTransformer(dataSet.getAxisDependency())
+        val trans = chart.getTransformer(dataSet.axisDependency)
 
         barBorderPaint.color = dataSet.getBarBorderColor()
         barBorderPaint.strokeWidth = Util.dpToPx(dataSet.getBarBorderWidth())
@@ -60,7 +60,7 @@ class BarChartRenderer(
 
         var buffer = barBuffers[index]
         buffer.dataSetIndex = index
-        buffer.inverted = chart.isInverted(dataSet.getAxisDependency())
+        buffer.inverted = chart.isInverted(dataSet.axisDependency)
         buffer.barWidth = chart.getBarData().barWidth
 
         buffer.feed(dataSet)

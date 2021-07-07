@@ -13,20 +13,27 @@ class UserRepos @Inject constructor(private val userDao: UserDataDao) {
     fun searchName(userName: String) = userDao.searchName("%"+userName+"%")
 
     fun searchFilter(
-        minAge: Int,
-        maxAge: Int,
-        sex: String,
-        diseaseType: String,
-        minDate: Calendar,
-        maxDate: Calendar,
-        receiveOrNot: String
+        minAge: Int?,
+        maxAge: Int?,
+        sex: String?,
+        diseaseType: String?,
+        minBpShrinkage: Int?,
+        maxBpShrinkage: Int?,
+        minBpRelaxation: Int?,
+        maxBpRelaxation: Int?,
+        receiveOrNot: String?,
+        visitDate:Calendar?,
     ) = userDao.searchFilter(
-        minAge, maxAge,
+        minAge,
+        maxAge,
         sex,
         diseaseType,
-        minDate,
-        maxDate,
-        receiveOrNot
+        minBpShrinkage,
+        maxBpShrinkage,
+        minBpRelaxation,
+        maxBpRelaxation,
+        receiveOrNot,
+        visitDate
     )
 
 }

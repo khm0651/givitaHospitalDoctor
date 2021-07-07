@@ -4,7 +4,8 @@
 
     xmlns:tool="http://schemas.android.com/tools">
 
-    <data></data>
+    <data>
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -171,11 +172,11 @@
                     android:id="@+id/et_insert_min_age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-
                     android:fontFamily="@font/spoqa_han_sans_neo_bold"
                     android:gravity="center"
                     android:text="1"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint1_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint1_h3"
@@ -199,6 +200,7 @@
                     android:gravity="center"
                     android:text="150"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/constraint1_h4"
                     app:layout_constraintRight_toRightOf="@id/constraint1_h5"
@@ -217,6 +219,7 @@
                     app:layout_constraintRight_toRightOf="@id/constraint1_h7"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_10age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="10대만"
@@ -236,6 +239,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint1_h9"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_20age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="20대만"
@@ -255,6 +259,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint1_h10"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_30age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="30대만"
@@ -274,6 +279,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint1_h11"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_40age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="40대만"
@@ -293,6 +299,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint1_h12"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_50age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="50대만"
@@ -313,6 +320,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_60age"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="60대 이상"
@@ -420,11 +428,14 @@
                     android:gravity="center"
                     android:text="모두"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
+                    android:enabled="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint2_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint2_h3"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_male"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="남성"
@@ -444,6 +455,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint2_h6"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_female"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="여성"
@@ -552,11 +564,14 @@
                     android:gravity="center"
                     android:text="모두"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
+                    android:enabled="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint3_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint3_h3"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_type1"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="Type 1"
@@ -576,6 +591,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint3_h6"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_type2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="Type 2"
@@ -719,6 +735,7 @@
                     android:gravity="center"
                     android:text="1"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint4_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint4_h3"
@@ -741,6 +758,7 @@
                     android:gravity="center"
                     android:text="300"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint4_h4"
                     app:layout_constraintRight_toRightOf="@id/constraint4_h5"
@@ -759,6 +777,7 @@
                     app:layout_constraintRight_toRightOf="@id/constraint4_h7"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_shrin_low"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="저혈압"
@@ -778,6 +797,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint4_h9"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_shrin_low_danger"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="저혈압 위험"
@@ -797,6 +817,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint4_h10"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_shrin_normal"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="보통 혈압"
@@ -816,6 +837,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint4_h11"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_shrin_high_danger"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="고혈압 위험"
@@ -835,6 +857,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint4_h12"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_shrin_high"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="고혈압"
@@ -978,6 +1001,7 @@
                     android:gravity="center"
                     android:text="1"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint5_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint5_h3"
@@ -1000,6 +1024,7 @@
                     android:gravity="center"
                     android:text="300"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint5_h4"
                     app:layout_constraintRight_toRightOf="@id/constraint5_h5"
@@ -1018,6 +1043,7 @@
                     app:layout_constraintRight_toRightOf="@id/constraint5_h7"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_relax_low"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="저혈압"
@@ -1037,6 +1063,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint5_h9"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_relax_low_danger"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="저혈압 위험"
@@ -1056,6 +1083,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint5_h10"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_relax_normal"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="보통 혈압"
@@ -1075,6 +1103,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint5_h11"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_relax_high_danger"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="고혈압 위험"
@@ -1094,6 +1123,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint5_h12"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_relax_high"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="고혈압"
@@ -1204,11 +1234,14 @@
                     android:gravity="center"
                     android:text="모두"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
+                    android:enabled="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint6_h3"
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
+                    android:id="@+id/tv_1week"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h4"
@@ -1218,19 +1251,22 @@
                     android:gravity="center_vertical"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_1week1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="최근"
                         android:textSize="12.5dp"
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
                         android:textColor="#BCBCBC"/>
+
                     <TextView
+                        android:id="@+id/tv_1week2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1주일"
-                        android:textSize="16.5dp"
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
-                        android:textColor="#BCBCBC"/>
+                        android:text="1주일"
+                        android:textColor="#BCBCBC"
+                        android:textSize="16.5dp" />
                 </LinearLayout>
                 <View
                     android:layout_width="0.5dp"
@@ -1240,6 +1276,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint6_h5"
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
+                    android:id="@+id/tv_1month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h5"
@@ -1249,6 +1286,7 @@
                     android:gravity="center_vertical"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_1month1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="최근"
@@ -1256,6 +1294,7 @@
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
                         android:textColor="#BCBCBC"/>
                     <TextView
+                        android:id="@+id/tv_1month2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1개월"
@@ -1271,6 +1310,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint6_h6"
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
+                    android:id="@+id/tv_3month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h6"
@@ -1280,6 +1320,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_3month1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="최근"
@@ -1287,6 +1328,7 @@
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
                         android:textColor="#BCBCBC"/>
                     <TextView
+                        android:id="@+id/tv_3month2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3개월"
@@ -1302,6 +1344,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint6_h7"
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
+                    android:id="@+id/tv_6month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h7"
@@ -1311,6 +1354,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_6month1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="최근"
@@ -1318,6 +1362,7 @@
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
                         android:textColor="#BCBCBC"/>
                     <TextView
+                        android:id="@+id/tv_6month2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6개월"
@@ -1333,6 +1378,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint6_h8"
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
+                    android:id="@+id/tv_date_setting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="@id/constraint6_h8"
@@ -1342,6 +1388,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_date_setting1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="직접"
@@ -1349,6 +1396,7 @@
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"
                         android:textColor="#BCBCBC"/>
                     <TextView
+                        android:id="@+id/tv_date_setting2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="설정"
@@ -1444,11 +1492,14 @@
                     android:gravity="center"
                     android:text="모두"
                     android:textSize="25dp"
+                    android:textColor="@color/textBlack"
+                    android:enabled="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/constraint7_h2"
                     app:layout_constraintRight_toRightOf="@id/constraint7_h3"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_receive_y"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="요청에 응답한 환자만"
@@ -1468,6 +1519,7 @@
                     app:layout_constraintRight_toLeftOf="@id/constraint7_h5"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+                    android:id="@+id/tv_receive_n"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="요청에 응답하지 않은 환자만"

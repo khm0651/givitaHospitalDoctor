@@ -18,7 +18,6 @@ import com.example.vitameanshospitaldoctor.databinding.PersonRecommendDialogBind
 class PersonRecommendDialog: DialogFragment() {
     private var _binding: PersonRecommendDialogBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: PersonRecommendDialogVM
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,8 +25,7 @@ class PersonRecommendDialog: DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = PersonRecommendDialogBinding.inflate(inflater,container,false)
-        viewModel = ViewModelProvider(this).get(PersonRecommendDialogVM::class.java)
-        binding.lifecycleOwner = this
+
         val view = binding.root
 
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))

@@ -8,20 +8,19 @@ import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.CompoundButton
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.databinding.RecommendItemBinding
+import kotlin.properties.Delegates
 
 class RecommendDialogItemCustom @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
     : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private val binding: RecommendItemBinding
     private var flag: Int = 1
+    private var state by Delegates.notNull<Boolean>()
 
     init {
         binding = RecommendItemBinding.inflate(LayoutInflater.from(context))
@@ -43,7 +42,9 @@ class RecommendDialogItemCustom @JvmOverloads constructor(context: Context, attr
 
     private fun setTypeArray(typedArray: TypedArray){
         val text = typedArray.getText(R.styleable.recommend_layout_text)
+        state = typedArray.getBoolean(R.styleable.recommend_layout_state,false)
         binding.personRecommendText.text = text
+        if(state) binding.personRecommendSwitch.isChecked = true
         typedArray.recycle()  //recycle() 메서드를 사용하면 앱에서 최대한 빨리 메모리를 회수할 수 있습니다.
     }
 
@@ -52,6 +53,7 @@ class RecommendDialogItemCustom @JvmOverloads constructor(context: Context, attr
     private fun setListener() {
         binding.apply {
             personRecommendSwitch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+
                 recommendTextWeak.setOnClickListener {
                     if(isChecked) flag = 0
                     flagNumber(flag,isChecked)

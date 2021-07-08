@@ -3,6 +3,7 @@
 
     <declare-styleable name="recommend_layout">
         <attr name="text" format="string"/>
+        <attr name="state" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="recommend_layout_box">
         <attr name="text_what" format="string"/>

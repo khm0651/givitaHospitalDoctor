@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/person_recommend">
+
+        <TextView
+            android:id="@+id/person_recommend_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="모든 운동"
+            android:textSize="15dp"
+            android:textColor="@color/recommend_text_title"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/person_recommend_layout" />
+
+        <Switch
+            android:id="@+id/person_recommend_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/person_recommend_layout"
+            android:layout_width="275dp"
+            android:layout_height="30.5dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/recommend_item_solid"
+            app:layout_constraintTop_toBottomOf="@+id/person_recommend_switch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/recommend_text_weak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="약 강도"
+                android:textSize="14dp"
+                android:textColor="@color/recommend_text"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginRight="216dp"
+                android:layout_marginBottom="5.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/recommend_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중 강도"
+                android:textSize="14dp"
+                android:textColor="@color/recommend_text"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="117dp"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginRight="115.5dp"
+                android:layout_marginBottom="5.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/recommend_text_strong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강 강도"
+                android:textSize="14dp"
+                android:textColor="@color/recommend_text"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:layout_marginLeft="216dp"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginBottom="5.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

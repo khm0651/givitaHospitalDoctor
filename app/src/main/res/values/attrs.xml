@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="recommend_layout">
+        <attr name="text" format="string"/>
+        <attr name="state" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="recommend_layout_box">
+        <attr name="text_what" format="string"/>
+        <attr name="text_first" format="string"/>
+        <attr name="text_second" format="string"/>
+        <attr name="text_third" format="string"/>
+        <attr name="text_four" format="string"/>
+    </declare-styleable>
+</resources>

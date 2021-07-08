@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="313dp"
+        android:layout_height="480dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="313dp"
+            android:layout_height="480dp"
+            android:background="@drawable/recommend_layout_white"
+            android:paddingLeft="17dp"
+            android:paddingRight="19dp"
+            android:paddingTop="31dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:id="@+id/person_recommend_layout_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어떤 운동을"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천할까요?"
+                android:textSize="17.5dp"
+                android:textStyle="bold"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_recommend_layout_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/person_recommend_edit_box"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/recommend_layout_item_solid">
+
+                <ImageView
+                    android:id="@+id/person_recommend_edit"
+                    android:layout_width="19.5dp"
+                    android:layout_height="19.5dp"
+                    android:src="@drawable/recommend_item_edit"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="21.5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="직접입력"
+                    android:textSize="10dp"
+                    android:textColor="@color/recommend_image_text"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/recommend_lines"
+                android:layout_width="276dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/recommend_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_recommend_edit_box"/>
+
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogItemCustom
+                android:id="@+id/recommend_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19.5dp"
+                app:text="모든 운동"
+                app:state="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_lines" />
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogItemCustom
+                android:id="@+id/recommend_item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39.5dp"
+                app:text="걷기"
+                app:state="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_item1"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogItemCustom
+                android:id="@+id/recommend_item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39.5dp"
+                app:text="조깅"
+                app:state="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_item2"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.example.vitameanshospitaldoctor.dialog.custom.RecommendDialogItemCustom
+                android:id="@+id/recommend_item4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39.5dp"
+                app:text="근력"
+                app:state="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_item3"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

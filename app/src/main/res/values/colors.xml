@@ -12,7 +12,6 @@
     <color name="odd">#F4F4F4</color>
     <color name="enable">#DBDBDB</color>
 
-
     <color name="tab_bg_selected">#626262</color>
     <color name="tab_bg_unselected">#979797</color>
 
@@ -27,5 +26,16 @@
     <color name="darkGray">#4A4A4A</color>
     <color name="btnGray">#A0A0A0</color>
     <color name="textBlack">#4B4B4B</color>
+
+    <color name="recommend_item_text">#979797</color>
+    <color name="recommend_image_text">#000000</color>
+    <color name="recommend_wave">#B4B4B4</color>
+    <color name="recommend_text_title">#898989</color>
+    <color name="recommend_text_title_select">#4B4B4B</color>
+    <color name="recommend_text">#BBBBBB</color>
+    <color name="recommend_text_select">#000000</color>
+    <color name="recommend_line">#979797</color>
+    <color name="recommend_info_text">#ffffff</color>
+    <color name="recommend_info_text_grey">#C5C5C5</color>
 
 </resources>

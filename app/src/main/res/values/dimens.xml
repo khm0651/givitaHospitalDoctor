@@ -7,4 +7,6 @@
     <dimen name="fragment_notification_item_width">210dp</dimen>
     <dimen name="fragment_notification_item_height">118dp</dimen>
 
+    <dimen name="recommend_info_text">13.5dp</dimen>
+
 </resources>

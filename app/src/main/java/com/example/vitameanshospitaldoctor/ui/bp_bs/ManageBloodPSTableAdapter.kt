@@ -4,17 +4,20 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.findFragment
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.data.entities.UserData
 import com.example.vitameanshospitaldoctor.databinding.ManageItemLayoutBinding
+import com.example.vitameanshospitaldoctor.dialog.PersonRecommendDialog
 import com.example.vitameanshospitaldoctor.showSnackbar
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 
-class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter<ManageBloodPSTableAdapter.ViewHolder>(){
+class ManageBloodPSTableAdapter(val fragmentManager: FragmentManager, val navigate: ()-> Unit ): RecyclerView.Adapter<ManageBloodPSTableAdapter.ViewHolder>(){
 
     private lateinit var mContext: Context
 
@@ -78,7 +81,8 @@ class ManageBloodPSTableAdapter( val navigate: ()-> Unit ): RecyclerView.Adapter
                 }
 
                 recommendBtn.setOnClickListener {
-                    it.showSnackbar("${item.userName}님께 식이/운동 추천을 보냈습니다", Snackbar.LENGTH_SHORT)
+                    PersonRecommendDialog().show(fragmentManager,"PersonRecommendDialog")
+//                    it.showSnackbar("${item.userName}님께 식이/운동 추천을 보냈습니다", Snackbar.LENGTH_SHORT)
                 }
             }
         }

@@ -19,14 +19,17 @@ interface UserDataDao {
     @Query("SELECT * FROM UserData WHERE userName like :userName")
     fun searchName(userName: String): Flow<List<UserData>>
 
-    @Query("SELECT * FROM UserData WHERE age>= :minAge AND age<= :maxAge AND sex = :sex AND diseaseType= :diseaseType AND lastVisitDate <= :minDate AND lastVisitDate >= :maxDate AND receiveOrNot = :receiveOrNot")
+    @Query("SELECT * FROM UserData WHERE age>= :minAge AND age<= :maxAge AND sex  NOT IN (:sex) AND diseaseType NOT IN (:diseaseType) AND shrinkage >= :minBpShrinkage AND shrinkage <= :maxBpShrinkage AND relaxation >= :minBpRelaxation  AND relaxation <= :maxBpRelaxation AND receiveOrNot NOT IN (:receiveOrNot) AND lastVisitDate < :visitDate")
     fun searchFilter(
-        minAge: Int,
-        maxAge: Int,
-        sex: String,
-        diseaseType: String,
-        minDate: Calendar,
-        maxDate: Calendar,
-        receiveOrNot: String
-    ): List<UserData>
+        minAge: Int?,
+        maxAge: Int?,
+        sex: String?,
+        diseaseType: String?,
+        minBpShrinkage: Int?,
+        maxBpShrinkage: Int?,
+        minBpRelaxation: Int?,
+        maxBpRelaxation: Int?,
+        receiveOrNot: String?,
+        visitDate:Calendar?
+    ): Flow<List<UserData>>
 }

@@ -14,15 +14,13 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.vitameanshospitaldoctor.R
 import com.example.vitameanshospitaldoctor.databinding.NameSearchDialogBinding
-import com.example.vitameanshospitaldoctor.ui.bp_bs.ManageBloodPSTableAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class NameSearchDialog : DialogFragment() {
+
     private var _binding: NameSearchDialogBinding? = null
     private val binding get() = _binding!!
     private val viewModel: NameSearchDialogVM by viewModels()
@@ -47,7 +45,6 @@ class NameSearchDialog : DialogFragment() {
                 viewModel.uName.value = binding.etName.text.toString()
                 binding.tvResult.alpha = 1f
                 binding.linearHead.alpha = 1f
-
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -80,7 +77,8 @@ class NameSearchDialog : DialogFragment() {
     private fun setObserver() {
         viewModel.result.observe(viewLifecycleOwner, {
             adapter.differ.submitList(it)
-            binding.tvResult.text="검색결과 ${it.size} 건"
+            binding.tvResult.text = "검색결과 ${it.size} 건"
+
 
         })
     }

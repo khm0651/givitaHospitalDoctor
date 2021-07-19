@@ -4,8 +4,8 @@ import com.example.vitameanshospitaldoctor.customview.BarEntry
 import com.example.vitameanshospitaldoctor.customview.IBarDataSet
 
 class BarBuffer(
-    var dataSetCount: Int,
-    size: Int
+    size: Int,
+    var dataSetCount: Int
 ) : AbstractBuffer<IBarDataSet>(size) {
 
     var dataSetIndex = 0

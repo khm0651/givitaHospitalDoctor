@@ -154,6 +154,12 @@ abstract class Chart<T: ChartData<out IDataSet<out Entry>>>: ViewGroup, IChart {
 
     }
 
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        viewPortHandler.chartDimens(w.toFloat(),h.toFloat())
+        notifyDataSetChanged()
+        super.onSizeChanged(w, h, oldw, oldh)
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
     }

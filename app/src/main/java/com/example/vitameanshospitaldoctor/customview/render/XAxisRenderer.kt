@@ -96,6 +96,33 @@ class XAxisRenderer(
                 pointF.y = 1.0f
                 drawLabels(c, viewPortHandler.contentRect.top - yOffSet, pointF)
             }
+
+            XAxis.XAxisPostion.TOP_INSIDE -> {
+                pointF.x = 0.5f
+                pointF.y = 1.0f
+                drawLabels(c, viewPortHandler.contentRect.top + yOffSet + xAxis.labelRotatedHeight, pointF)
+            }
+
+            XAxis.XAxisPostion.BOTTOM -> {
+                pointF.x = 0.5f
+                pointF.y = 0f
+                drawLabels(c, viewPortHandler.contentRect.bottom + yOffSet, pointF)
+            }
+
+            XAxis.XAxisPostion.BOTTOM_INSIDE -> {
+                pointF.x = 0.5f
+                pointF.y - 0f
+                drawLabels(c,viewPortHandler.contentRect.bottom - yOffSet - xAxis.labelRotatedHeight, pointF)
+            }
+
+            XAxis.XAxisPostion.BOTH_SIDED -> {
+                pointF.x = 0.5f
+                pointF.y = 1.0f
+                drawLabels(c, viewPortHandler.contentRect.top - yOffSet, pointF)
+                pointF.x = 0.5f
+                pointF.y = 0f
+                drawLabels(c, viewPortHandler.contentRect.bottom + yOffSet, pointF)
+            }
         }
     }
 
@@ -105,7 +132,7 @@ class XAxisRenderer(
         var positions = FloatArray(xAxis.entries.size * 2)
 
         for(i in 0 until positions.size step 2){
-            positions[i] = xAxis.centeredEntries[i / 2]
+            positions[i] = xAxis.entries[i / 2]
         }
 
         trans.pointValuesToPixel(positions)

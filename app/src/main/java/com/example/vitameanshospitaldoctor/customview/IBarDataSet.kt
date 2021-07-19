@@ -4,13 +4,12 @@ import com.example.vitameanshospitaldoctor.customview.components.YAxis
 
 interface IBarDataSet: IDataSet<BarEntry>  {
 
-    fun getBarShadowColor(): Int
+    var barBorderColor: Int
 
-    fun getBarBorderWidth(): Float
+    var barBorderWidth: Float
 
-    fun getBarBorderColor(): Int
+    var barShadowColor: Int
 
-    fun getHighLightAlpha(): Int
-
+    var highLightAlpha: Int
 
 }

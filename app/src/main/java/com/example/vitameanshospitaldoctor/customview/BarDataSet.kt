@@ -9,6 +9,11 @@ class BarDataSet(
 ): DataSet<BarEntry>(entries, label), IBarDataSet {
 
     var highLightColor = Color.rgb(255,187,115)
+    override var isVisible = true
+    override var barBorderColor = Color.BLACK
+    override var barBorderWidth = 0f
+    override var highLightAlpha: Int = 120
+    override var barShadowColor: Int = Color.BLACK
 
     override fun calcMinMax(e: BarEntry) {
 
@@ -21,31 +26,5 @@ class BarDataSet(
             calcMinMaxX(e)
         }
     }
-
-    override fun getBarShadowColor(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun getBarBorderWidth(): Float {
-        TODO("Not yet implemented")
-    }
-
-    override fun getBarBorderColor(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun getHighLightAlpha(): Int {
-        TODO("Not yet implemented")
-    }
-
-
-    override fun isVisible(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun <T> getEntryForIndex(index: Int): T {
-        TODO("Not yet implemented")
-    }
-
 
 }

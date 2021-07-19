@@ -36,6 +36,8 @@ abstract class DataRenderer(viewPortHandler: ViewPortHandler) : Renderer(viewPor
 
     }
 
+    abstract fun initBufferes()
+
     abstract fun drawData(c: Canvas)
 
     abstract fun drawValues(c: Canvas)

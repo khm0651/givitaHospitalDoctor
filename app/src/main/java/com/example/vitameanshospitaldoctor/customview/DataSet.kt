@@ -65,7 +65,7 @@ abstract class DataSet<T: Entry>(
     }
 
     override fun getEntryCount(): Int {
-        return 0
+        return entries.size
     }
 
     override fun calcMinMax() {
@@ -81,5 +81,9 @@ abstract class DataSet<T: Entry>(
     }
 
     override fun calcMinMaxY(fromX: Float, toX: Float) {
+    }
+
+    override fun <T> getEntryForIndex(index: Int): T {
+        return entries[index] as T
     }
 }

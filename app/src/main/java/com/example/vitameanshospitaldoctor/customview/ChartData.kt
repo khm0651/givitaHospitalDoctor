@@ -155,4 +155,8 @@ abstract class ChartData<T: IDataSet<out Entry>>{
         return datasets.size
     }
 
+
+    fun getDataSetCount(): Int{
+        return datasets.size
+    }
 }

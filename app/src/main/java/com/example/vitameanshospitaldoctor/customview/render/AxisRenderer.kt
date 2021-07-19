@@ -48,7 +48,7 @@ abstract class AxisRenderer(
 
         var t_min = min
         var t_max = max
-        if(viewPortHandler.contentWidth() > 10 && viewPortHandler.isFullyZoomedOutY()){
+        if(viewPortHandler.contentWidth() > 10 && !viewPortHandler.isFullyZoomedOutY()){
 
             var p1 = trans.getValuesByTouchPoint(viewPortHandler.contentRect.left, viewPortHandler.contentRect.top)
             var p2 = trans.getValuesByTouchPoint(viewPortHandler.contentRect.left, viewPortHandler.contentRect.bottom)

@@ -9,6 +9,7 @@ import com.example.vitameanshospitaldoctor.customview.IBarDataSet
 import com.example.vitameanshospitaldoctor.customview.buffer.BarBuffer
 import com.example.vitameanshospitaldoctor.customview.utils.ViewPortHandler
 import com.example.vitameanshospitaldoctor.utils.Util
+import java.nio.Buffer
 
 class BarChartRenderer(
     val chart: BarDataProvider,
@@ -36,27 +37,38 @@ class BarChartRenderer(
         barBorderPaint.style = Paint.Style.STROKE
     }
 
+    override fun initBufferes() {
+        val bardata = chart.getBarData()
+        barBuffers = Array(bardata.getDataSetCount()){
+            var set = bardata.getDataSetByIndex(it)!!
+            BarBuffer(set.getEntryCount() * 4,bardata.getDataSetCount())
+        }
+
+    }
+
     override fun drawData(c: Canvas) {
         val barData = chart.getBarData()
 
         for(i in barData.datasets.indices){
             val set = barData.getDataSetByIndex(i)
             set?.let {
-                if(set.isVisible()){
-//                    drawDataSet.
+                if(set.isVisible){
+                    drawDataSet(c,set,i)
                 }
             }
 
         }
+
+
     }
 
     fun drawDataSet(c: Canvas, dataSet: IBarDataSet, index: Int){
         val trans = chart.getTransformer(dataSet.axisDependency)
 
-        barBorderPaint.color = dataSet.getBarBorderColor()
-        barBorderPaint.strokeWidth = Util.dpToPx(dataSet.getBarBorderWidth())
+        barBorderPaint.color = dataSet.barBorderColor
+        barBorderPaint.strokeWidth = Util.dpToPx(dataSet.barBorderWidth)
 
-        var drawBorder = dataSet.getBarBorderWidth() > 0f
+        var drawBorder = dataSet.barBorderWidth > 0f
 
         var buffer = barBuffers[index]
         buffer.dataSetIndex = index
@@ -89,10 +101,6 @@ class BarChartRenderer(
             j += 4
             pos++
         }
-
-
-
-
 
     }
 

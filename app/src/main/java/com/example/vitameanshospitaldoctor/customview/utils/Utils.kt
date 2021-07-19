@@ -23,6 +23,10 @@ object Utils {
         return r.height()
     }
 
+    fun calcTextWidth(paint: Paint, demoText: String): Float{
+        return paint.measureText(demoText)
+    }
+
     var drawTextRectBuffer = Rect()
     var fontMetricsBuffer = Paint.FontMetrics()
 

@@ -89,7 +89,7 @@ class YAxis(position: AxisDependency = AxisDependency.LEFT) : AxisBase() {
         p.textSize = textSize
 
         var label = getLongestLabel()
-        var width = Utils.calcTextHeight(p, label) + xOffset * 2f
+        var width = Utils.calcTextWidth(p, label) + xOffset * 2f
 
         var minWidth = minWidth
         var maxWidth = maxWidth

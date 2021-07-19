@@ -91,7 +91,7 @@ class BarChart: Chart<BarData>, BarDataProvider {
     }
 
     private fun setYAxis() {
-        axisLeft.labelCount = 8
+        axisLeft.labelCount = 6
         axisLeft.spacePercentTop = 15f
         axisLeft.position = YAxis.YAxisLabelPosition.OUTSIDE_CHART
         axisLeft.axisMinimum = 0f
@@ -158,7 +158,11 @@ class BarChart: Chart<BarData>, BarDataProvider {
         axisRendererLeft.renderAxisLine(canvas)
         axisRendererRight.renderAxisLine(canvas)
 
-        drawGridBackground(canvas)
+        xAxisRenerer.renderAxisLabels(canvas)
+        axisRendererLeft.renderAxisLabels(canvas)
+        axisRendererRight.renderAxisLabels(canvas)
+
+//        drawGridBackground(canvas)
         renderer.drawData(canvas)
     }
 
@@ -174,7 +178,7 @@ class BarChart: Chart<BarData>, BarDataProvider {
     }
     override fun notifyDataSetChanged() {
         data?.let {
-
+            renderer.initBufferes()
             calMinMax(it)
             axisRendererLeft.computeAxis(axisLeft.axisMinimum,axisLeft.axisMaximum, axisLeft.inverted)
             axisRendererRight.computeAxis(axisRight.axisMinimum,axisRight.axisMaximum, axisRight.inverted)
@@ -193,7 +197,7 @@ class BarChart: Chart<BarData>, BarDataProvider {
     }
 
     override fun getBarData(): BarData {
-        return BarData()
+        return data?: BarData()
     }
 
     override fun isInverted(axis: YAxis.AxisDependency): Boolean {
@@ -201,7 +205,7 @@ class BarChart: Chart<BarData>, BarDataProvider {
     }
 
     override fun getTransformer(axis: YAxis.AxisDependency): Transformer {
-        return Transformer(viewPortHandler)
+        return if(axis == YAxis.AxisDependency.LEFT) leftAxisTransformer else rightAxisTransformer
     }
 
     override fun calculateOffsets() {

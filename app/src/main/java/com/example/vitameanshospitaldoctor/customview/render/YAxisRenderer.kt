@@ -67,11 +67,11 @@ class YAxisRenderer(
         }else{
 
             if(labelPosition == YAxis.YAxisLabelPosition.OUTSIDE_CHART){
-                axisLabelPaint.textAlign = Paint.Align.RIGHT
-                xPos = viewPortHandler.contentRect.right - xOffSet
-            }else{
                 axisLabelPaint.textAlign = Paint.Align.LEFT
                 xPos = viewPortHandler.contentRect.right + xOffSet
+            }else{
+                axisLabelPaint.textAlign = Paint.Align.RIGHT
+                xPos = viewPortHandler.contentRect.right - xOffSet
             }
 
         }

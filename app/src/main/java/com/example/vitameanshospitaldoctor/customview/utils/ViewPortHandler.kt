@@ -62,4 +62,20 @@ class ViewPortHandler {
     fun offsetBottom(): Float {
         return chartHeight - contentRect.bottom
     }
+
+    fun offsetRight(): Float{
+        return chartWidth - contentRect.left
+    }
+
+    fun chartDimens(width: Float, height: Float) {
+        var offsetLeft = contentRect.left
+        var offsetTop = contentRect.top
+        var offsetRight = offsetRight()
+        var offsetBottom = offsetBottom()
+
+        chartWidth = width
+        chartHeight = height
+
+        restrainViewPort(offsetLeft,offsetTop, offsetRight, offsetBottom)
+    }
 }

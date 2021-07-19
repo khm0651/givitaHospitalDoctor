@@ -14,6 +14,8 @@ interface IDataSet<T: Entry> {
 
     var axisDependency: YAxis.AxisDependency
 
+    var isVisible: Boolean
+
     fun getEntryCount(): Int
 
     /**
@@ -23,7 +25,6 @@ interface IDataSet<T: Entry> {
 
     fun calcMinMaxY(fromX: Float, toX: Float)
 
-    fun isVisible(): Boolean
 
     fun <T> getEntryForIndex(index: Int): T
 }

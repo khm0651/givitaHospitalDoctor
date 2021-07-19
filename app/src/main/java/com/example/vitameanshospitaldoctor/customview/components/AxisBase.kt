@@ -24,9 +24,9 @@ abstract class AxisBase {
 
     var entryCount = 0
 
-    var yOffset = 5f
+    var yOffset = Util.dpToPx(5f)
 
-    var xOffset = 5f
+    var xOffset = Util.dpToPx(5f)
 
     var gridDashPathEffect: DashPathEffect? = null
 
@@ -39,6 +39,12 @@ abstract class AxisBase {
     lateinit var axisValueFormatter: IAxisValueFormatter
 
     var labelCount = 6
+        set(value){
+            var count = value
+            if(count > axisMaxLabels) count = axisMaxLabels
+            if(count < axisMinLabels) count = axisMinLabels
+            field = count
+        }
 
     var centerAxisLabels = false
     var isCenterAxisLabelsEnabled: Boolean = false
@@ -55,6 +61,11 @@ abstract class AxisBase {
     var spaceMax = 0f
 
     var axisRange = 0f
+
+    var axisMinLabels = 2
+
+    var axisMaxLabels = 25
+
 
     fun setValueFormatter(f: IAxisValueFormatter){
         axisValueFormatter = f

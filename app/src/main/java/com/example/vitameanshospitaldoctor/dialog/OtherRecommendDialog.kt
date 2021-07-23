@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.CompoundButton
 import androidx.fragment.app.DialogFragment
 import com.example.vitameanshospitaldoctor.databinding.OtherRecommendDialogBinding
 

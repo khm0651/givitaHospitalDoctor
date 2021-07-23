@@ -25,7 +25,6 @@ class PersonRecommendDialog: DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = PersonRecommendDialogBinding.inflate(inflater,container,false)
-
         val view = binding.root
 
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))

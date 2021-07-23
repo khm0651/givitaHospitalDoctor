@@ -20,8 +20,6 @@ class DetailInfoFrag : Fragment() {
     lateinit var adapter: DetailInfoAdapter
     private lateinit var callback: OnBackPressedCallback
     private val viewmodel: DetailInfoVM by viewModels()
-
-
     private var bothList = mutableListOf<DetailInfo>()
     private var bpList = mutableListOf<DetailInfo>()
     private var bsList = mutableListOf<DetailInfo>()

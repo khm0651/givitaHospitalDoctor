@@ -38,8 +38,6 @@ class ManageBloodPSTable(
     ): View? {
 
         binding = FragmentManageBloodPSTableBinding.inflate(inflater,container,false)
-
-
         binding.btnFilterSearch.setOnClickListener {
             filterSearchDialog.show(childFragmentManager, "FilterSearchDialog")
         }

@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -438,7 +437,7 @@
                 android:layout_marginTop="106dp"
                 android:layout_marginRight="43dp"
                 android:layout_marginBottom="98dp"
-                app:text_what="어떤 운동을"
+                app:text_what="어떤 식이를"
                 app:text_first="전체 조절 권유"
                 app:text_second="탄수화물 조절"
                 app:text_third="단백질 조절"
@@ -456,7 +455,7 @@
                 android:layout_marginTop="181.5dp"
                 android:layout_marginRight="442dp"
                 android:layout_marginBottom="173dp"
-                app:text_what="어떤 식이"
+                app:text_what="어떤 운동을"
                 app:text_first="모든 운동"
                 app:text_second="걷기"
                 app:text_third="조깅"

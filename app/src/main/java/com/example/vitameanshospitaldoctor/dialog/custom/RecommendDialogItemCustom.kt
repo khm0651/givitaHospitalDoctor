@@ -20,12 +20,12 @@ class RecommendDialogItemCustom @JvmOverloads constructor(context: Context, attr
 
     private val binding: RecommendItemBinding
     private var flag: Int = 1
-    private var state by Delegates.notNull<Boolean>()
+    var state by Delegates.notNull<Boolean>()
 
     init {
         binding = RecommendItemBinding.inflate(LayoutInflater.from(context))
         addView(binding.root)
-        setListener()
+        listener(true)
         getAttrs(attrs)
         getAttrs(attrs,defStyleAttr)
     }
@@ -48,38 +48,34 @@ class RecommendDialogItemCustom @JvmOverloads constructor(context: Context, attr
         typedArray.recycle()  //recycle() 메서드를 사용하면 앱에서 최대한 빨리 메모리를 회수할 수 있습니다.
     }
 
-
-    @RequiresApi(Build.VERSION_CODES.M)
-    private fun setListener() {
+    fun listener(isChecked: Boolean) {
         binding.apply {
-            personRecommendSwitch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-
-                recommendTextWeak.setOnClickListener {
-                    if(isChecked) flag = 0
-                    flagNumber(flag,isChecked)
-                }
-                recommendTextMedium.setOnClickListener {
-                    if(isChecked) flag = 1
-                    flagNumber(flag,isChecked)
-                }
-                recommendTextStrong.setOnClickListener {
-                    if(isChecked) flag = 2
-                    flagNumber(flag,isChecked)
-                }
-                if(isChecked){
-                    personRecommendText.setTextColor(resources.getColor(R.color.recommend_text_title_select,null))
-                    flagNumber(flag,isChecked)
-                } else {
-                    personRecommendText.setTextColor(resources.getColor(R.color.recommend_text_title,null))
-                    recommendTextWeak.setTextColor(resources.getColor(R.color.recommend_text))
-                    recommendTextMedium.setTextColor(resources.getColor(R.color.recommend_text))
-                    recommendTextStrong.setTextColor(resources.getColor(R.color.recommend_text))
-                }
-            })
+            println("listener")
+            recommendTextWeak.setOnClickListener {
+                if(isChecked) flag = 0
+                flagNumber(flag,isChecked)
+            }
+            recommendTextMedium.setOnClickListener {
+                if(isChecked) flag = 1
+                flagNumber(flag,isChecked)
+            }
+            recommendTextStrong.setOnClickListener {
+                if(isChecked) flag = 2
+                flagNumber(flag,isChecked)
+            }
+            if(isChecked){
+                personRecommendText.setTextColor(resources.getColor(R.color.recommend_text_title_select,null))
+                flagNumber(flag,isChecked)
+            } else {
+                personRecommendText.setTextColor(resources.getColor(R.color.recommend_text_title,null))
+                recommendTextWeak.setTextColor(resources.getColor(R.color.recommend_text))
+                recommendTextMedium.setTextColor(resources.getColor(R.color.recommend_text))
+                recommendTextStrong.setTextColor(resources.getColor(R.color.recommend_text))
+            }
         }
     }
 
-    private fun flagNumber(num: Int, boolean: Boolean) {
+   fun flagNumber(num: Int, boolean: Boolean) {
         binding.apply {
             if(boolean){
                 when(num){

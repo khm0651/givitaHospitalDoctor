@@ -28,7 +28,6 @@ class DetailInfoAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     inner class BothViewHolder(private val binding: DetailItemLayoutBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(item: DetailInfo){
             binding.apply {
-
                 day.text = item.day
                 date.text = item.date
                 immWakeupBp.text = if(item.detailBloodPressure!!.immediatleyWakeup.shrink == null && item.detailBloodPressure!!.immediatleyWakeup.relaxation == null) "-" else "${item.detailBloodPressure!!.immediatleyWakeup.shrink}\n/${item.detailBloodPressure!!.immediatleyWakeup.relaxation}"
